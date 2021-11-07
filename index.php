@@ -7,8 +7,6 @@ $comando = "SELECT * FROM produtos";
 
 $resultado = mysqli_query($conexao,$comando) or die("Busca deu errado!");
 
-$pattern = "/\./";
-$replace = ",";
 ?>
 <head>
     <link rel="stylesheet" href="css/index.css">
@@ -28,7 +26,7 @@ $replace = ",";
        <div class="produto">
         <a href="paginaProduto.php?id=<?= $linha['idProduto']?>"> <img src="images/<?= $linha["imgProduto"] ?>" class="img-produto"> </a>
         <a class ="titulo-produto" href="paginaProduto.php?id=<?= $linha['idProduto']?> "> <?= $linha['nomeProduto'] ?>  </a>
-        <a class ="preco-produto" href="paginaProduto.php?id=<?= $linha['idProduto']?> "> R$ <?= preg_replace($pattern,$replace,$linha["precoProduto"]) ?> </a>
+        <a class ="preco-produto" href="paginaProduto.php?id=<?= $linha['idProduto']?> "> R$ <?= number_format($linha["precoProduto"], 2, ',', '.' ) ?> </a>
        </div> 
 
 <?php endwhile ?> 

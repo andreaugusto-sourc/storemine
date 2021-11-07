@@ -6,8 +6,6 @@ require_once 'produtosCRUD.php';
 $conexao = conectar();
 $resultado = exibirProdutos($conexao);
 
-$pattern = "/\./";
-$replace = ",";
 ?>
 <head>
   <link rel="stylesheet" href="css/admin.css">
@@ -41,11 +39,11 @@ $replace = ",";
      <a class="item-linha" href="detalhesProduto.php?id=<?= $linha['idProduto']?>"><img src="images/<?= $linha['imgProduto'] ?>" class="img-linha"> </a>
      <a class="item-linha"><?= $linha['nomeProduto'] ?></a>
      <a class="item-linha"><?= $linha['qtdProduto'] ?> </a>
-     <a class="item-linha">R$ <?= preg_replace($pattern,$replace,$linha["precoProduto"]) ?> </a>
+     <a class="item-linha">R$ <?= number_format($linha["precoProduto"], 2, ',', '.' ) ?> </a>
      <a class="item-linha" href="editarProduto.php?id=<?= $linha['idProduto']?>">Editar</a>
      <a class="item-linha" href="deletarProduto.php?id=<?= $linha['idProduto']?>">Deletar</a>
   </div>
-    
+   
 <?php endwhile ?> 
 
 </div>
