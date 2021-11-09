@@ -1,0 +1,34 @@
+Create table produtos(
+idProduto integer unsigned not null auto_increment,
+nomeProduto varchar(30) not null,
+descriProduto text not null,
+precoProduto decimal(10,2) not null ,
+estoqueProduto integer not null,
+primary key(idProduto)
+
+
+);
+Create table imagens(
+    idImagem integer unsigned not null auto_increment,
+    arquivoImagem blob not null,
+    tipoImagem boolean not null,
+    primary key(idImagem)
+
+);
+Create table usuario(
+    idUsuario intenger unsigned not null auto_increment,
+    nomeUsuario varchar(16) not null,
+    senhaUsuario varbinary(100) not null,
+    primary key(idUsuario)
+
+);
+Create table categoria(
+    idCategoria integer unsigned not null auto_increment,
+    nomeCategoria varchar(40) not null,
+    idProduto integer,
+    CONSTRAINT fkcatprod FOREIGN KEY (idProduto) REFERENCES produtos (idProduto)
+    primary key(idCategoria)
+
+);
+
+

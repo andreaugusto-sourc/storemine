@@ -28,17 +28,9 @@ $produto = mysqli_fetch_assoc($resultado);
 <label for="novaDescri">Descrição do Novo Produto:</label>
 <input type="text" value="<?= $produto['descriProduto'] ?>" name="novaDescri" id="novaDescri">
 
-<label for="novoImg">Imagem principal do Novo Produto:</label>
-<input type="file" value="<?= $produto['imgProduto'] ?>" name="novoImg" id="novoImg">
-
-<label for="novoimg2">Imagem secundária do Novo Produto:</label>
-<input type="file" value="<?= $produto['img2Produto'] ?>" name="novoimg2" id="novoimg2">
-
 <label for="novaQtd">Estoque do Novo Produto:</label>
-<input type="number" value="<?= $produto['qtdProduto'] ?>" name="novaQtd" id="novaQtd">
+<input type="number" value="<?= $produto['estoqueProduto'] ?>" name="novoEstoque" id="novoEstoque">
 
-<label for="novoTipo">Tipo do Novo Produto:</label>
-<input type="text" value="<?= $produto['tipoProduto'] ?>" name="novoTipo" id="novoTipo">
 
 <input id="botao" type="submit" value="Atualizar">
 

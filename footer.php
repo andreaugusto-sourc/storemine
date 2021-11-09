@@ -9,8 +9,10 @@
 <style>
     /* FOOTER */
 footer{
-    margin-top: 1.5rem;
-    display:flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
     justify-content: space-around;
     border-top: var(--cor3) 0.2rem solid;
     width: 100%;

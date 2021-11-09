@@ -1,5 +1,6 @@
 <?php
 require_once 'conexao.php';
+require_once 'CRUD.php';
 
 $conexao = conectar();
 

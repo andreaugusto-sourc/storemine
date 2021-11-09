@@ -54,8 +54,8 @@ span{
 }
 #input-pesquisa{
     font-size: 1.5rem;
-    width:360px;
-    height:60px;
+    width:18.75vw;
+    height:6.19vh;
 }
 button{
     border: none;

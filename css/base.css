@@ -18,9 +18,10 @@ body{
     background-color: var(--cor1);
 }
 .container{
-    max-width: 1140px;
-    width:90%;
+    max-width: 95%;
+    width: 59.375vw;
     margin: auto;
+    margin-bottom: 2rem;
 }
 
 

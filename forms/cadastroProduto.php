@@ -8,10 +8,11 @@
     <title>Cadastro Produto</title>
 </head>
 <body>
+    
 
     <form method="POST" action="salvarProduto.php" enctype="multipart/form-data">
 
-    <h1>Cadastre um produto</h1>
+    <h2>Cadastre um produto</h2>
 
     <label for="nomeProduto">Nome do Produto:</label>
     <input type="text" name="nomeProduto" id="nomeProduto">
@@ -22,17 +23,8 @@
     <label for="descriProduto">Descrição do Produto:</label>
     <input type="text" name="descriProduto" id="descriProduto">
 
-    <label for="imgProduto">Imagem principal do Produto:</label>
-    <input type="file" name="imgProduto" id="imgProduto">
-
-    <label for="img2Produto">Imagem secundária do Produto:</label>
-    <input type="file" name="img2Produto" id="img2Produto">
-
     <label for="qtdProduto">Estoque do Produto:</label>
-    <input type="number" name="qtdProduto" id="qtdProduto">
-
-    <label for="tipoProduto">Tipo do Produto:</label>
-    <input type="text" name="tipoProduto" id="tipoProduto">
+    <input type="number" name="estoqueProduto" id="estoqueProduto">
 
     <input type="submit" id="botao" value="Cadastrar">
 

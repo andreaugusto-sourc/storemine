@@ -1,11 +1,13 @@
 @import 'base.css';
+
 section{
+    
     display: flex;
     justify-content: space-around;
 }
 a{
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 
 }
 /* ABA */
@@ -30,7 +32,7 @@ a{
 }
 /* DASHBOARD */
 #dashboard{
-    width: 100%;
+    width: 45%;
 
 }
 h1{

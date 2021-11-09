@@ -1,6 +1,6 @@
 <?php
 require_once 'conexao.php';
-require_once 'produtosCRUD.php';
+require_once 'CRUD.php';
 $idProduto = $_GET['id'];
 
 $conexao = conectar();
