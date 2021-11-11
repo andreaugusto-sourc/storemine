@@ -1,9 +1,9 @@
 <?php
 
-function adicionarProduto($conexao,$nomeProduto,$precoProduto,$descriProduto,$estoqueProduto) {
+function adicionarProduto($conexao,$nomeProduto,$precoProduto,$imagemProduto,$descriProduto,$estoqueProduto) {
     
-    $comando = "INSERT INTO produtos (nomeProduto,precoProduto,descriProduto,estoqueProduto)
-    values ('$nomeProduto','$precoProduto','$descriProduto','$estoqueProduto')";
+    $comando = "INSERT INTO produtos (nomeProduto,precoProduto,imagemProduto,descriProduto,estoqueProduto)
+    values ('$nomeProduto','$precoProduto','$imagemProduto','$descriProduto','$estoqueProduto')";
 
     $resultado = mysqli_query($conexao, $comando);
     return $resultado;
@@ -17,9 +17,9 @@ function deletarProduto($conexao,$idProduto) {
     return $resultado;
 
 }
-function atualizarProduto($conexao,$idProduto,$novoNome, $novoPreco, $novaDescri,$novoEstoque) {
+function atualizarProduto($conexao,$idProduto,$novoNome, $novoPreco,$novaImagem, $novaDescri,$novoEstoque) {
 
-   $comando ="UPDATE produtos SET nomeProduto = '$novoNome', precoProduto = '$novoPreco', descriProduto = '$novaDescri',
+   $comando ="UPDATE produtos SET nomeProduto = '$novoNome', precoProduto = '$novoPreco', descriProduto = '$novaDescri', imagemProduto = '$novaImagem',
    estoqueProduto = '$novoEstoque' where idProduto = '$idProduto' " ;
 
    $resultado = mysqli_query($conexao,$comando);

@@ -2,7 +2,7 @@
     
     <img src="images/creep.png" id="img-logo">
 
-    <h1><span>Store</span>Mine</h1>
+    <a href="index.php"><h1><span>Store</span>Mine</h1></a>
 
     <div id="barra-pesquisa">
 
@@ -34,7 +34,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: auto;
     font-size: 1.6rem;
     
 }
@@ -47,6 +46,7 @@ span{
 }
 #img-logo{
     width:8%;
+    max-width: 120px;
 }
 #barra-pesquisa{
     display: flex;
@@ -55,7 +55,7 @@ span{
 #input-pesquisa{
     font-size: 1.5rem;
     width:18.75vw;
-    height:6.19vh;
+    height:6.2vh;
 }
 button{
     border: none;

@@ -1,22 +1,24 @@
 <footer>
+    
     <a href="" class="item-rodape">Sobre</a>
     <a href="" class="item-rodape">Contato</a>
     <a href="" class="item-rodape">Privacidade</a>
     <a href="admin.php" class="item-rodape">Administração</a>
+ 
 </footer>
 
 
 <style>
     /* FOOTER */
 footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    margin-top: 4%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     border-top: var(--cor3) 0.2rem solid;
     width: 100%;
 }
+
 .item-rodape{
     text-decoration: none;
     color: var(--cor4);

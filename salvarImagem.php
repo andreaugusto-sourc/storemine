@@ -1,17 +1,18 @@
 <?php
-require_once 'conexao.php';
 require_once 'crud/CRUD.php';
-$idProduto = $_GET['id'];
-
+require_once 'conexao.php';
 $conexao = conectar();
+$arquivoImagem = $_POST['arquivoImagem'];
 
-$resultado = deletarProduto($conexao,$idProduto);
+$resultado = adicionarImagem($conexao,$arquivoImagem);
 
-if ($resultado ){
-    echo "Produto deletado com sucesso!
+if ($resultado) {
+    echo "A inserção foi feita!
     <br> <a href='index.php'>Home</a> ou <a href='admin.php'>Admin</a>";
 }else {
-    echo "Produto não deletado!
+    echo "Erro na inserção!
     <br> <a href='index.php'>Home</a> ou <a href='admin.php'>Admin</a>";
 }
 
+
+?>

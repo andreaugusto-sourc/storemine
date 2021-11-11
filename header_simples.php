@@ -20,7 +20,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: auto;
     font-size: 1.6rem;
     border-bottom: 0.2rem solid gray;
 
@@ -34,9 +33,10 @@ span{
 }
 #img-logo{
     width:8%;
+    max-width: 120px;
 }
 .item-header{
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: rgb(37, 218, 218);
     text-decoration: none;
 
@@ -45,9 +45,5 @@ span{
     color: black;
     
 }
-
-
-
-
 
 </style>

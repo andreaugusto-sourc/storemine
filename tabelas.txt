@@ -2,16 +2,15 @@ Create table produtos(
 idProduto integer unsigned not null auto_increment,
 nomeProduto varchar(30) not null,
 descriProduto text not null,
+imagemProduto varchar(60) not null,
 precoProduto decimal(10,2) not null ,
 estoqueProduto integer not null,
 primary key(idProduto)
-
 
 );
 Create table imagens(
     idImagem integer unsigned not null auto_increment,
     arquivoImagem blob not null,
-    tipoImagem boolean not null,
     primary key(idImagem)
 
 );
@@ -30,5 +29,3 @@ Create table categoria(
     primary key(idCategoria)
 
 );
-
-

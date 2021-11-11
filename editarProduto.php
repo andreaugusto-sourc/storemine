@@ -1,7 +1,7 @@
 <?php
 $idProduto = $_GET['id'];
 require_once 'conexao.php';
-require_once 'produtosCRUD.php';
+require_once 'crud/CRUD.php';
 
 $conexao = conectar();
 
@@ -15,7 +15,7 @@ $produto = mysqli_fetch_assoc($resultado);
 
 <form method="POST" action="atualizarProduto.php" enctype="multipart/form-data">
 
-<h1>Update dos Produtos</h1>
+<h2>Update dos Produtos</h2>
 
 <input type="hidden" value="<?= $produto['idProduto'] ?>" name="idProduto">
 
@@ -25,10 +25,13 @@ $produto = mysqli_fetch_assoc($resultado);
 <label for="novoPreco">Preço do Novo Produto:</label>
 <input type="number" value="<?= $produto['precoProduto'] ?>" name="novoPreco" id="novoPreco">
 
+<label for="novaImagem">Imagem principal do Novo Produto:</label>
+<input type="file" value="<?= $produto['imagemProduto'] ?>" name="novaImagem" id="novaImagem">
+
 <label for="novaDescri">Descrição do Novo Produto:</label>
 <input type="text" value="<?= $produto['descriProduto'] ?>" name="novaDescri" id="novaDescri">
 
-<label for="novaQtd">Estoque do Novo Produto:</label>
+<label for="novoEstoque">Estoque do Novo Produto:</label>
 <input type="number" value="<?= $produto['estoqueProduto'] ?>" name="novoEstoque" id="novoEstoque">
 
 
