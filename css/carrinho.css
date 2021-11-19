@@ -1,0 +1,19 @@
+@import 'base.css';
+section{
+    display: flex;
+}
+.item-carrinho{
+    display: flex;
+    flex-direction: column;
+}
+.imagem-item{
+    width: 120px;
+}
+.botoes{
+    display: flex;
+}
+.botoes a{
+    font-size: 2rem;
+    padding: 0.8rem 1.5rem;
+    border: solid black 0.1rem;
+}

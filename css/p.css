@@ -1,1 +1,117 @@
 @import 'base.css';
+section{
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+#imagens-produto{
+    background-color: none;
+
+}
+#imagem-principal{
+    border-bottom: 0.1rem solid black;
+    width: 43vw;
+}
+.imagens-secundarias{
+    margin: 0.5rem;
+    width: 11.5vw;
+}
+/* informaÃ§Ãµes do produto */
+#info-produto{
+    padding: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+  
+}
+
+p{
+    margin-top: 1rem;
+    color: rgb(73, 73, 73);
+    font-size: 2rem;
+
+}
+#titulo{
+    font-size: 2.5rem;
+
+}
+#bloco-pagamento{
+    color: white;
+    background-color: var(--cor0);
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+}
+#preco{
+    font-size: 4rem;
+
+}
+#formas-href{
+    color: black;
+
+}
+#bloco-frete{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+#enter{
+    border: none;
+    border: 0.1rem solid lightgray;
+    height: 2.5rem;
+    width: 10vw;
+    border-radius: 0.4rem;
+}
+#estrutura{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+}
+#imagem-decorativa{
+    margin-top: 1rem;
+    width: 25%;
+}
+/* INPUTS VARIAVEIS */
+select{
+    border: none;
+    margin-top: 2rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+/* BOTOES DE ACAO */
+#botao-compra{
+    margin-top: 2rem;
+    padding: 1.6rem;
+    background-color: var(--cor0);
+    font-size: 1.9rem;
+
+}
+#botao-carrinho{
+    padding: 1.5rem;
+    background-color: rgb(185, 185, 185);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+
+}
+.botao{
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-family: 'Russo One', sans-serif;
+
+}
+button a{
+    color:black;
+}
+.botao:hover{
+    text-decoration: underline;
+}
+.selo{
+    margin-top: 1.5rem;
+    font-size:1.6rem;
+}
+.selo a{
+    color: rgb(143, 209, 187);
+}

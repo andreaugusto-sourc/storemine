@@ -7,7 +7,7 @@
     <div id="barra-pesquisa">
 
     <input type="text" id="input-pesquisa" placeholder="O que voce está procurando?">
-    <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+    <button class="icon-pesquisa" type="submit"><ion-icon name="search-outline"></ion-icon></button>
 
     </div>
  
@@ -25,6 +25,8 @@
     <li class="item-cabecalho">Diversos</li>
 
 </ul>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
 <style>
@@ -54,10 +56,10 @@ span{
 }
 #input-pesquisa{
     font-size: 1.5rem;
-    width:18.75vw;
-    height:6.2vh;
+    width:20.75vw;
+    height:7.2vh;
 }
-button{
+.icon-pesquisa{
     border: none;
     background-color: #222;
     color: white;
