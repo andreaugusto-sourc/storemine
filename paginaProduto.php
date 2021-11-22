@@ -96,7 +96,7 @@ $categoria;
 
 
 <button type="submit" class="botao" id="botao-compra">Compra</button>
-<button type="submit" class="botao" id="botao-carrinho"><a href="carrinho.php?addCarrinho=<?= $idProduto ?>">Adicionar ao Carrinho</a></button>
+<button type="submit" class="botao" id="botao-carrinho"><a href="adicionarCarrinho.php?addCarrinho=<?= $idProduto ?>">Adicionar ao Carrinho</a></button>
 
 
 <article class="selo">

@@ -8,7 +8,7 @@
     <title>Cadastro Produto</title>
 </head>
 <body>
-
+    <?php include 'header_simples.php' ?>
     <form method="POST" action="salvarProduto.php" enctype="multipart/form-data">
     <h2>Cadastre um produto</h2>
 
@@ -31,6 +31,6 @@
 
 
     </form>
-    
+    <?php include 'footer.php' ?>
 </body>
 </html>

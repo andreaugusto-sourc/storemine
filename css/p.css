@@ -10,7 +10,7 @@ section{
 }
 #imagem-principal{
     border-bottom: 0.1rem solid black;
-    width: 43vw;
+    width: 35vw;
 }
 .imagens-secundarias{
     margin: 0.5rem;
@@ -22,7 +22,7 @@ section{
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    width: 38%;
+    width: 35vw;
   
 }
 

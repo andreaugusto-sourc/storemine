@@ -29,3 +29,4 @@ Create table categoria(
     primary key(idCategoria)
 
 );
+https://www.youtube.com/watch?v=Y9uat94abxU

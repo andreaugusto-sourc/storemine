@@ -18,12 +18,16 @@ body{
     background-color: var(--cor1);
 }
 .container{
-    max-width: 1140px;
-    width:90%;
+    max-width: 90%;
     margin: auto;
 }
 a{
     text-decoration: none;
+}
+@media (width > 1300px) {
+    .container{
+        max-width: 100%;
+    }
 }
 
 

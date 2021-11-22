@@ -2,11 +2,10 @@
 session_start();
 require_once 'conexao.php';
 require_once 'crud/CRUD.php';
-$idProduto = $_GET['addCarrinho'];
+
 $conexao = conectar();
 
-$resultado = exibirProduto($conexao, $idProduto);
-$produto = mysqli_fetch_assoc($resultado);
+print_r($_SESSION['carrinho']);
 ?>
 
 <!DOCTYPE html>
@@ -25,29 +24,10 @@ $produto = mysqli_fetch_assoc($resultado);
 
      <?php
 
-      if(isset($_GET['addCarrinho'])) {
-       $idProd = (int) $_GET['addCarrinho'];
-       if (isset($_SESSION['carrinho'][$idProd])) {
-           $_SESSION['carrinho'][$idProd]['quantidade']++;
-
-       }else{
-           $_SESSION['carrinho'][$idProd] = array('quantidade' => 1, 'nome' => $produto['nomeProduto'], 'preco' => $produto['precoProduto'], 'imagem' => $produto['imagemProduto']);
-       }
-    }else {
-        die("Tu não pode adicionar ao carrinho um produto que não existe!");
-    }
     
-    if(isset($_GET['excluirTudo'])) {
-        session_destroy();
-    }
-    if (isset($_GET['removerUM'])) {
-        $_SESSION['carrinho'][$idProduto]['quantidade']--;
-    }else if (isset($_GET['adicionarUM'])) {
-        $_SESSION['carrinho'][$idProduto]['quantidade']++;
-    }
 
      ?>
-      <a href="carrinho.php?excluirTudo=true">Excluir itens do carrinho</a>
+      <a href="excluir.php?excluirTudo=true">Excluir itens do carrinho</a>
      <section>
      <?php foreach($_SESSION['carrinho'] as $chave => $valor ) { ?>
           
@@ -57,8 +37,9 @@ $produto = mysqli_fetch_assoc($resultado);
               <p>R$ <?= number_format($valor['quantidade'] * $valor['preco'],2,',','.') ?></p>
               <p>Quantidade: <?= $valor['quantidade'] ?> </p>
               <div class="botoes">
-            <a href="carrinho.php?deletarUm=<?= $idProduto ?>">-</a>
-            <a href="carrinho.php?adicionarUm=<?= $idProduto ?>">+</a>  
+            <a href="remover.php?removerUM=<?= $valor['id'] ?>">-</a>
+            <a href="adicionarCarrinho.php?adicionarUM=<?= $valor['id'] ?>">+</a>
+            <a href="deletarCarrinho.php?deletarPROD=<?= $valor['id'] ?>">Tirar do carrinho</a>  
         </div>
   
         </div>

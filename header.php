@@ -57,7 +57,7 @@ span{
 #input-pesquisa{
     font-size: 1.5rem;
     width:20.75vw;
-    height:7.2vh;
+    height:6vh;
 }
 .icon-pesquisa{
     border: none;
