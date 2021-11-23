@@ -9,7 +9,7 @@
 </head>
 <body>
     
-
+<?php include 'header_simples.php' ?>
     <form method="POST" action="salvarImagem.php" enctype="multipart/form-data">
 
     <h2>Adicione imagens secundárias para os produtos</h2>
@@ -21,6 +21,6 @@
 
 
     </form>
-    
+<?php include 'footer.php'  ?>  
 </body>
 </html>

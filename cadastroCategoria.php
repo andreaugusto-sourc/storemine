@@ -9,7 +9,7 @@
 </head>
 <body>
     
-
+<?php include 'header_simples.php' ?>
     <form method="POST" action="salvarCategoria.php" enctype="multipart/form-data">
 
     <h2>Cadastre uma Categoria</h2>
@@ -21,6 +21,6 @@
 
 
     </form>
-    
+<?php include 'footer.php'  ?>      
 </body>
 </html>

@@ -12,7 +12,7 @@ $produto = mysqli_fetch_assoc($resultado);
 <head>
     <link rel="stylesheet" href="css/editar_cadastro.css">
 </head>    
-
+<?php include 'header_simples.php' ?>
 <form method="POST" action="atualizarProduto.php" enctype="multipart/form-data">
 
 <h2>Update dos Produtos</h2>
@@ -38,3 +38,4 @@ $produto = mysqli_fetch_assoc($resultado);
 <input id="botao" type="submit" value="Atualizar">
 
 </form>
+<?php include 'footer.php' ?>

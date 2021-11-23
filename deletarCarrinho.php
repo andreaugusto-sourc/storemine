@@ -3,8 +3,8 @@ session_start();
 $idProd = $_GET['deletarPROD'];
 
 if(isset($_GET['deletarPROD'])) {
+    echo "Produto deletado";
     unset($_SESSION['carrinho'][$idProd]);
-    echo "Produto deletado" . $_SESSION['carrinho'][$idProd]['nome'];
     sort($_SESSION['carrinho']);
 }
 

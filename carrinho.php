@@ -5,7 +5,6 @@ require_once 'crud/CRUD.php';
 
 $conexao = conectar();
 
-print_r($_SESSION['carrinho']);
 ?>
 
 <!DOCTYPE html>

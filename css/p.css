@@ -9,8 +9,9 @@ section{
 
 }
 #imagem-principal{
+    object-fit: cover;
     border-bottom: 0.1rem solid black;
-    width: 35vw;
+    width: 45vw;
 }
 .imagens-secundarias{
     margin: 0.5rem;

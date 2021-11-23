@@ -7,7 +7,7 @@ if (isset($_GET['removerUM'])) {
         echo "-1";
     }
 
-if($_SESSION['carrinho'][$idProd]['quantidade']--){
+if($_SESSION['carrinho'][$idProd]['quantidade'] < 1){
         unset($_SESSION['carrinho'][$idProd]);
     }
 
