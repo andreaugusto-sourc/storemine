@@ -10,6 +10,11 @@ $conexao = conectar();
 
 $nomeProduto = $_POST["nomeProduto"];
 $precoProduto = $_POST["precoProduto"]/100;
+$idCategoria = $_POST['idCategoria'];
+$replacement = "";
+$pattern = "/[A-Za-z\-]+/";
+$idCategoria = preg_replace($pattern,$replacement,$idCategoria);
+echo $idCategoria;
 
 if (isset($_FILES["imagemProduto"])) {
     $imagem = $_FILES["imagemProduto"];
@@ -28,7 +33,7 @@ if (isset($_FILES["imagemProduto"])) {
     $novoCaminho = uniqid();
 
     $extensao = strtolower(pathinfo($imagemCaminho,PATHINFO_EXTENSION));
-    if ($extensao !=  "jpg" && $extensao != 'png' ) {
+    if ($extensao !=  "jpg" && $extensao != 'png' && $extensao != "webp" ) {
         die("Tipo de arquivo inválido!");
     }
 
@@ -47,7 +52,7 @@ $imagemProduto = $novoCaminho ."." . $extensao;
 $descriProduto = $_POST["descriProduto"];
 $estoqueProduto = $_POST["estoqueProduto"];
 
-$resultado =  adicionarProduto($conexao,$nomeProduto,$precoProduto,$imagemProduto,$descriProduto,$estoqueProduto);
+$resultado = adicionarProduto($conexao,$nomeProduto,$precoProduto,$imagemProduto,$descriProduto,$estoqueProduto,$idCategoria);
 
 if ($resultado) {
     echo "A inserção foi feita!

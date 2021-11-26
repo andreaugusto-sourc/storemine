@@ -12,9 +12,9 @@ primary key(idProduto)
 );
 Create table categorias(
     idCategoria integer not null auto_increment,
-    imagemCategoria blob,
-    descriCategoria text not null,
     nomeCategoria varchar(40) not null,
+    imagemCategoria blob,
+    descriCategoria text null,
     primary key(idCategoria)
 
 );

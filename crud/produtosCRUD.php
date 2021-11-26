@@ -1,9 +1,9 @@
 <?php
 
-function adicionarProduto($conexao,$nomeProduto,$precoProduto,$imagemProduto,$descriProduto,$estoqueProduto) {
+function adicionarProduto($conexao,$nomeProduto,$precoProduto,$imagemProduto,$descriProduto,$estoqueProduto,$idCategoria) {
     
-    $comando = "INSERT INTO produtos (nomeProduto,precoProduto,imagemProduto,descriProduto,estoqueProduto)
-    values ('$nomeProduto','$precoProduto','$imagemProduto','$descriProduto','$estoqueProduto')";
+    $comando = "INSERT INTO produtos (nomeProduto,precoProduto,imagemProduto,descriProduto,estoqueProduto,idCategoria)
+    values ('$nomeProduto','$precoProduto','$imagemProduto','$descriProduto','$estoqueProduto','$idCategoria')";
 
     $resultado = mysqli_query($conexao, $comando);
     return $resultado;

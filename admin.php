@@ -34,15 +34,15 @@ if (isset($_GET['modo'])) {
 <div id="aba">
     <h2>Alterações</h2>
 
-    <a href="cadastroProduto.php" class="item-aba">Novo Produto</a>
+    <a href="cadastro.php?modo=produtos" class="item-aba">Novo Produto</a>
 
     <a class="item-aba" href="admin.php?modo=produtos">Todos produtos</a>
 
-    <a href="cadastroCategoria.php" class="item-aba">Nova Categoria</a>
+    <a href="cadastro.php?modo=categorias" class="item-aba">Nova Categoria</a>
 
     <a class="item-aba" href="admin.php?modo=categorias">Todas as categorias</a>
 
-    <a href="cadastroImagens.php" class="item-aba">Nova imagem </a>
+    <a href="cadastro.php?modo=imagens" class="item-aba">Nova imagem </a>
 
     <a class="item-aba" href="admin.php?modo=imagens">Todas as imagens </a>
 
@@ -64,7 +64,7 @@ if (isset($_GET['modo'])) {
      <a class="item-linha"><?= $linha['estoqueProduto'] ?> </a>
      <a class="item-linha">R$ <?= number_format($linha["precoProduto"], 2, ',', '.' ) ?> </a>
      <a class="item-linha" href="editarProduto.php?id=<?= $linha['idProduto']?>">Editar</a>
-     <a class="item-linha" href="deletarProduto.php?id=<?= $linha['idProduto']?>">Deletar</a>
+     <a class="item-linha" href="deletar.php?id=<?= $linha['idProduto']?>&modo=produtos">Deletar</a>
   </div>
    
 <?php endwhile ?> 
@@ -80,7 +80,7 @@ if (isset($_GET['modo'])) {
      <a class="item-linha" href="detalhesCategoria.php?id=<?= $linha['idCategoria']?>"><img src="images/<?= $linha['imagemCategoria'] ?>" class="img-linha"> </a>
      <a class="item-linha"><?= $linha['nomeCategoria'] ?></a>
      <a class="item-linha" href="editar.php?id=<?= $linha['idCategoria']?>">Editar</a>
-     <a class="item-linha" href="deletar.php?id=<?= $linha['idCategoria']?>">Deletar</a>
+     <a class="item-linha" href="deletar.php?id=<?= $linha['idCategoria']?>&modo=categorias">Deletar</a>
   </div>
    
 <?php endwhile ?> 

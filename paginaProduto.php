@@ -6,11 +6,17 @@ require_once 'crud/CRUD.php';
 $conexao = conectar();
 $idProduto = $_GET['id'];
 
-$resultado = exibirProduto($conexao,$idProduto);
 
+$resultado = exibirProduto($conexao,$idProduto);
 $produto = mysqli_fetch_assoc($resultado);
+
+$idCategoria = $produto['idCategoria'];
+
+$resultado2 = exibirCategoria($conexao,$idCategoria);
+$categoria = mysqli_fetch_assoc($resultado2);
+
 require_once 'tabelaParcelas.php';
-$categoria;
+
 
 ?>
 <!DOCTYPE html>
@@ -83,14 +89,29 @@ $categoria;
     <select>
         <option>1 unidade</option>
       <?php
-      for ($i = 2; $i <= 16; $i++) {
+      for ($i = 2; $i <= 8; $i++) {
           echo "<option>" . $i .  " unidades". "</option>";
       }
 
       ?>
-      <option>Mais de 16 unidades</option>
+      <option>Mais de 8 unidades</option>
     </select>
 
+    <?php if($categoria['nomeCategoria'] == "Roupa") { ?>
+
+        <select>
+            <option>PP</option>
+            <option>P</option>
+            <option>M</option>
+            <option>G</option>
+            <option>GXG</option>
+
+        </select>
+
+    
+<?php } ?>
+
+    
 
 
 
