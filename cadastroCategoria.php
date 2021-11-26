@@ -14,8 +14,14 @@
 
     <h2>Cadastre uma Categoria</h2>
 
-    <label for="nomeCategoria">Nome da Cateogira:</label>
+    <label for="nomeCategoria">Nome da Categoria:</label>
     <input type="text" name="nomeCategoria" id="nomeCategoria">
+
+    <label for="imagemCategoria">Imagem da Categoria:</label>
+    <input type="file" name="imagemCategoria" id="imagemCategoria">
+
+    <label for="descriCategoria">Descrição da Categoria:</label>
+    <input type="text" name="descriCategoria" id="descriCategoria">
 
     <input type="submit" id="botao" value="Cadastrar">
 

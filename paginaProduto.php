@@ -17,7 +17,7 @@ $categoria;
 <html lang="pt-br">
 <head>
     <link rel="icon" href="images/m.webp">
-    <link rel="stylesheet" href="css/p.css">
+    <link rel="stylesheet" href="css/main.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,8 @@ $categoria;
 <div class="container">
 <?php include 'header.php' ?>    
 
-<section>
+<main>
+
 <div id="imagens-produto">
 
 <img src="images/<?= $produto['imagemProduto']?>" id="imagem-principal">
@@ -128,12 +129,11 @@ $categoria;
 
 </article>
 
+    </main>
 
+    </div>
+    
 
-</section>
-
-
-</div>
 <?php include 'footer.php'; ?>
     
 </body>

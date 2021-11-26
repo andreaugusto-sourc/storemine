@@ -1,0 +1,33 @@
+@media(max-width:500px) {
+    html{
+        font-size: 35%;
+    }
+    footer{
+        width: 100%;
+    }
+    .container{
+        max-width: none;
+        width: 100%;
+    }
+    /* pagina inicial */
+    .caixa-produtos{
+        flex-direction: column;
+    }
+     /* pagina do produto */
+     main{
+        flex-direction: column;
+    
+     }
+     #imagem-principal{
+         border: none;
+     }
+     .imagens-secundarias{
+        margin: 0;
+        width: 0;
+         
+         
+     }
+     p{
+         margin-top: 0;
+     }
+}

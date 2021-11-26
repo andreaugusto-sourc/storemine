@@ -1,23 +1,32 @@
-@import 'base.css';
-section{
+
+main{
+    background-color: blue;
     display: flex;
-    justify-content: center;
-    background-color: whitesmoke;
+ 
+  
 }
 #imagens-produto{
+    width: 45vw;
     background-color: none;
 
 }
 #imagem-principal{
     object-fit: cover;
     border-bottom: 0.1rem solid black;
-    width: 45vw;
+    width: 100%;
+    height: 82.1vh;
 }
-.imagens-secundarias{
-    margin: 0.5rem;
+#imagens-produto article{
+    display: flex;
     width: 11.5vw;
 }
-/* informaÃ§Ãµes do produto */
+.imagens-secundarias{
+    object-fit: cover;
+    margin: 0.5rem;
+    width: 100%;
+    height: 19.7vh;
+}
+/* informacoes do produto */
 #info-produto{
     padding: 1rem;
     font-size: 1.5rem;
@@ -116,3 +125,4 @@ button a{
 .selo a{
     color: rgb(143, 209, 187);
 }
+

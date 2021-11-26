@@ -17,6 +17,7 @@ a{
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 26.4vw;
 }
 .titulo-produto{
     color: black;
@@ -32,8 +33,8 @@ a{
 
 }
 .img-produto{
-    object-fit: cover ;
-    width: 400px;
-    height: 450px;
+    object-fit: cover;
+    width:  100%;
+    height: 62.3vh;
   
 }

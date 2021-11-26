@@ -4,7 +4,22 @@ require_once 'conexao.php';
 require_once 'crud/CRUD.php';
 
 $conexao = conectar();
-$resultado = exibirProdutos($conexao);
+
+if (isset($_GET['modo'])) {
+  if ($_GET['modo'] == "produtos") {
+    $modo = "produtos";
+    $resultado = exibirProdutos($conexao);
+  
+  }else if($_GET['modo'] == "categorias") {
+    $modo = "categorias";
+    $resultado = exibirCategorias($conexao);
+  }
+
+}else {
+  $modo = "";
+}
+
+
 
 ?>
 <head>
@@ -19,24 +34,26 @@ $resultado = exibirProdutos($conexao);
 <div id="aba">
     <h2>Alterações</h2>
 
-    <a href="cadastroProduto.php">Novo Produto</a>
+    <a href="cadastroProduto.php" class="item-aba">Novo Produto</a>
 
-    <a class="item-aba">Todos produtos</a>
+    <a class="item-aba" href="admin.php?modo=produtos">Todos produtos</a>
 
-    <a href="cadastroImagens.php">Nova imagem </a>
+    <a href="cadastroCategoria.php" class="item-aba">Nova Categoria</a>
 
-    <a class="item-aba">Todas as imagens </a>
+    <a class="item-aba" href="admin.php?modo=categorias">Todas as categorias</a>
 
-    <a href="cadastroCategoria.php">Nova Categoria</a>
+    <a href="cadastroImagens.php" class="item-aba">Nova imagem </a>
 
-    <a class="item-aba">Todas as categorias</a>
+    <a class="item-aba" href="admin.php?modo=imagens">Todas as imagens </a>
+
+
 
     <img src="images/whiter2.png" id="aba-img">
 
 </div>
 
 <div id="dashboard">
-
+ <?php if ($modo == "produtos") { ?>
 <h1>Inventário de Produtos:</h1>
 
 <?php while ($linha = mysqli_fetch_assoc($resultado)): ?>  
@@ -53,6 +70,24 @@ $resultado = exibirProdutos($conexao);
 <?php endwhile ?> 
 
 </div>
+<?php }else if ($modo == 'categorias') {
+?>
+<h1>Inventário de categorias:</h1>
+
+<?php while ($linha = mysqli_fetch_assoc($resultado)): ?>  
+      
+  <div class="linha">
+     <a class="item-linha" href="detalhesCategoria.php?id=<?= $linha['idCategoria']?>"><img src="images/<?= $linha['imagemCategoria'] ?>" class="img-linha"> </a>
+     <a class="item-linha"><?= $linha['nomeCategoria'] ?></a>
+     <a class="item-linha" href="editar.php?id=<?= $linha['idCategoria']?>">Editar</a>
+     <a class="item-linha" href="deletar.php?id=<?= $linha['idCategoria']?>">Deletar</a>
+  </div>
+   
+<?php endwhile ?> 
+
+<?php }else {
+  echo "<h1>Nenhuma tabela de dados selecionada!</h1>";
+  }?>
 
 
 </section>

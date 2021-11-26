@@ -11,9 +11,9 @@
 
     </div>
  
-     <img src="images/minecart.png" class="imagens-link"> <a href="carrinho.php">Carrinho</a>
+     <img src="images/minecart.png" class="imagens-link"> <a class="link" href="carrinho.php">Carrinho</a>
 
-     <img src="images/uniao2.png" class="imagens-link">   Cadastro ou Login
+     <img src="images/uniao2.png" class="imagens-link">   <a class="link" href="">Cadastro ou Login</a>
 
 </header>
 
@@ -56,8 +56,8 @@ span{
 }
 #input-pesquisa{
     font-size: 1.5rem;
-    width:20.75vw;
-    height:7vh;
+    width:22.75vw;
+    height:5rem;
 }
 .icon-pesquisa{
     border: none;
@@ -66,6 +66,9 @@ span{
 }
 .imagens-link{
     width:5%;
+}
+.link{
+    color:black;
 }
 /* MENU */
 ul{

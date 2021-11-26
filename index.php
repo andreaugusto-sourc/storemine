@@ -10,7 +10,7 @@ $resultado = mysqli_query($conexao,$comando) or die("Busca deu errado!");
 
 ?>
 <head>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>

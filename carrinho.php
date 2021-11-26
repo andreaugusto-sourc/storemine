@@ -26,9 +26,10 @@ $conexao = conectar();
     
 
      ?>
-      <a href="excluir.php?excluirTudo=true">Excluir itens do carrinho</a>
      <section>
-     <?php foreach($_SESSION['carrinho'] as $chave => $valor ) { ?>
+         
+     <?php if (isset($_SESSION['carrinho'])) { 
+         foreach($_SESSION['carrinho'] as $chave => $valor ) { ?>
           
           <div class="item-carrinho">
               <p><?= $valor['nome'] ?> </p>
@@ -47,7 +48,9 @@ $conexao = conectar();
 
 
 
-    <?php  } ?>
+    <?php  } }else{
+        echo "Carrinho ainda vazio...";
+    }?>
      </section>
 
     </div>

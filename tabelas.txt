@@ -1,32 +1,38 @@
 Create table produtos(
-idProduto integer unsigned not null auto_increment,
+idProduto integer not null auto_increment,
 nomeProduto varchar(30) not null,
 descriProduto text not null,
 imagemProduto varchar(60) not null,
-precoProduto decimal(10,2) not null ,
+precoProduto decimal(10,2) not null,
 estoqueProduto integer not null,
+idCategoria integer,
+CONSTRAINT fk_CateProd FOREIGN KEY (idCategoria) REFERENCES categorias (idCategoria),
 primary key(idProduto)
 
 );
+Create table categorias(
+    idCategoria integer not null auto_increment,
+    imagemCategoria blob,
+    descriCategoria text not null,
+    nomeCategoria varchar(40) not null,
+    primary key(idCategoria)
+
+);
 Create table imagens(
-    idImagem integer unsigned not null auto_increment,
+    idImagem integer not null auto_increment,
+    idProduto integer,
     arquivoImagem blob not null,
+    CONSTRAINT fk_ImgsProd FOREIGN KEY (idImagem) REFERENCES produtos (idImagem),
     primary key(idImagem)
 
 );
+
 Create table usuario(
-    idUsuario intenger unsigned not null auto_increment,
+    idUsuario intenger not null auto_increment,
     nomeUsuario varchar(16) not null,
     senhaUsuario varbinary(100) not null,
     primary key(idUsuario)
 
 );
-Create table categoria(
-    idCategoria integer unsigned not null auto_increment,
-    nomeCategoria varchar(40) not null,
-    idProduto integer,
-    CONSTRAINT fkcatprod FOREIGN KEY (idProduto) REFERENCES produtos (idProduto)
-    primary key(idCategoria)
 
-);
-https://www.youtube.com/watch?v=Y9uat94abxU
+
