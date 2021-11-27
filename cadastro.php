@@ -5,6 +5,8 @@ require_once 'crud/CRUD.php';
 $conexao = conectar();
 $resultado = exibirCategorias($conexao);
 
+$resultado2 = exibirImagens($conexao);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -51,7 +53,7 @@ $resultado = exibirCategorias($conexao);
 
     </form>
 
-<?php } elseif ($_GET['modo'] = "categorias") { ?>
+<?php } else if ($_GET['modo'] == "categorias") { ?>
 
 <form method="POST" action="salvarCategoria.php" enctype="multipart/form-data">
 
@@ -71,7 +73,7 @@ $resultado = exibirCategorias($conexao);
 
 </form>
 
-<?php }else { ?>
+<?php }else if ($_GET['modo'] == "imagens") { ?>
 
 <form method="POST" action="salvarImagem.php" enctype="multipart/form-data">
 
@@ -79,6 +81,13 @@ $resultado = exibirCategorias($conexao);
 
 <label for="arquivoImagem">Imagem secundária:</label>
 <input type="file" name="arquivoImagem" id="arquivoImagem">
+
+<label for="IdProduto">Imagem principal</label>
+<select>
+    <?php while($imagem = mysqli_fetch_assoc($resultado2)) {
+        echo "<option>" . $imagem['idImagem'] . "</option>";
+    } ?>
+</select>
 
 <input type="submit" id="botao" value="Adicionar">
 

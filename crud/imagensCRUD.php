@@ -19,7 +19,19 @@ function atualizarImagem($conexao,$idImagem,$arquivoImagem) {
     $resultado = mysqli_query($conexao,$comando);
     return $resultado;
 }
+function exibirImagens($conexao) {
+    $comando = "SELECT * FROM imagens ";
 
+    $resultado = mysqli_query($conexao,$comando);
+    return $resultado;
+}
+function exibirImagem($conexao,$idImagem) {
+
+    $comando = "SELECT * FROM imagens where idImagem = '$idImagem'";
+
+    $resultado = mysqli_query($conexao,$comando);
+    return $resultado;
+}
 
 
 

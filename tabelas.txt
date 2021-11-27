@@ -22,7 +22,7 @@ Create table imagens(
     idImagem integer not null auto_increment,
     idProduto integer,
     arquivoImagem blob not null,
-    CONSTRAINT fk_ImgsProd FOREIGN KEY (idImagem) REFERENCES produtos (idImagem),
+    CONSTRAINT fk_ImgsProd FOREIGN KEY (idProduto) REFERENCES produtos (idProduto),
     primary key(idImagem)
 
 );

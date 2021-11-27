@@ -11,6 +11,7 @@ $resultado = deletarProduto($conexao,$idProduto);
     $resultado = deletarCategoria($conexao,$idCategoria);
 }else {
     $idImagem = $_GET['id'];
+    $resultado = deletarImagem($conexao,$idImagem);
 }
 
 

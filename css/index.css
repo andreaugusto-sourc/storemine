@@ -17,7 +17,7 @@ a{
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 26.4vw;
+    width: 26vw;
 }
 .titulo-produto{
     color: black;

@@ -16,9 +16,9 @@ function deletarCategoria($conexao,$idCategoria) {
     return $resultado;
 
 }
-function atualizarCategoria($conexao,$idCategoria,$novoNome,$novaDescri,$imagemCategoria) {
+function atualizarCategoria($conexao,$idCategoria,$novoNome,$novaDescri,$novaImagem) {
 
-    $comando ="UPDATE categorias SET nomeCategoria = '$novoNome', descriCategoria = '$novaDescri', imagemCategoria = '$imagemCategoria' where idCategoria = '$idCategoria' " ;
+    $comando ="UPDATE categorias SET nomeCategoria = '$novoNome', descriCategoria = '$novaDescri', imagemCategoria = '$novaImagem' where idCategoria = '$idCategoria' " ;
  
     $resultado = mysqli_query($conexao,$comando);
     return $resultado;

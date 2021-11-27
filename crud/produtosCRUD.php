@@ -17,10 +17,10 @@ function deletarProduto($conexao,$idProduto) {
     return $resultado;
 
 }
-function atualizarProduto($conexao,$idProduto,$novoNome, $novoPreco,$novaImagem, $novaDescri,$novoEstoque) {
+function atualizarProduto($conexao,$idProduto,$novoNome, $novoPreco,$novaImagem, $novaDescri,$novoEstoque,$novaCate) {
 
    $comando ="UPDATE produtos SET nomeProduto = '$novoNome', precoProduto = '$novoPreco', descriProduto = '$novaDescri', imagemProduto = '$novaImagem',
-   estoqueProduto = '$novoEstoque' where idProduto = '$idProduto' " ;
+   estoqueProduto = '$novoEstoque', idCategoria = '$novaCate' where idProduto = '$idProduto' " ;
 
    $resultado = mysqli_query($conexao,$comando);
    return $resultado;

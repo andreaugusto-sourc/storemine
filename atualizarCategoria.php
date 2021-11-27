@@ -1,14 +1,17 @@
 <?php
-session_start();
 
+session_start();
 if(isset($_SESSION['admin'])) {
 
 require_once 'conexao.php';
 require_once 'crud/CRUD.php';
 
-$idProduto = $_POST['idProduto'];
+$conexao = conectar();
+$idCategoria = $_POST['idCategoria'];
+
 $novoNome = $_POST['novoNome'];
-$novoPreco = $_POST['novoPreco'];
+$novaDescri = $_POST['novaDescri'];
+
 if (isset($_FILES["novaImagem"])) {
     $imagem = $_FILES["novaImagem"];
 
@@ -42,26 +45,17 @@ if (isset($_FILES["novaImagem"])) {
     
 }
 $novaImagem = $novoCaminho . "." . $extensao ;
-$novaCate = $_POST['novaCate'];
-$novaDescri = $_POST['novaDescri'];
-$novoEstoque = $_POST['novoEstoque'];
 
-
-$conexao = conectar();
-
-$resultado = atualizarProduto($conexao,$idProduto,$novoNome, $novoPreco, $novaImagem, $novaDescri,$novoEstoque,$novaCate);
+$resultado = atualizarCategoria($conexao,$idCategoria,$novoNome, $novaImagem, $novaDescri);
 
 if($resultado) {
-    echo "Produto atualizado com sucesso
+    echo "Categoria atualizada com sucesso
     <br> <a href='index.php'>Home</a> ou <a href='admin.php'>Admin</a>";
 }else {
-    echo "Produto não atualizado!
+    echo "Categoria não atualizado!
     <br> <a href='index.php'>Home</a> ou <a href='admin.php'>Admin</a>";
 }
 
-}else {
+}else{
     die("Tu não tem permissão admin, SUMA DAQUI OU FAÇA LOGIN! <a href='login.php'>Login</a>");
 }
-?>
-
-

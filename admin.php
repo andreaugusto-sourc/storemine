@@ -13,12 +13,15 @@ if (isset($_GET['modo'])) {
   }else if($_GET['modo'] == "categorias") {
     $modo = "categorias";
     $resultado = exibirCategorias($conexao);
-  }
 
+  }else if($_GET['modo'] == "imagens") {
+    $modo = "imagens";
+    $resultado = exibirImagens($conexao);
+
+  }
 }else {
   $modo = "";
 }
-
 
 
 ?>
@@ -53,7 +56,8 @@ if (isset($_GET['modo'])) {
 </div>
 
 <div id="dashboard">
- <?php if ($modo == "produtos") { ?>
+
+<?php if ($modo == "produtos") { ?>
 <h1>Inventário de Produtos:</h1>
 
 <?php while ($linha = mysqli_fetch_assoc($resultado)): ?>  
@@ -70,8 +74,7 @@ if (isset($_GET['modo'])) {
 <?php endwhile ?> 
 
 </div>
-<?php }else if ($modo == 'categorias') {
-?>
+<?php }else if ($modo == 'categorias') { ?>
 <h1>Inventário de categorias:</h1>
 
 <?php while ($linha = mysqli_fetch_assoc($resultado)): ?>  
@@ -79,13 +82,28 @@ if (isset($_GET['modo'])) {
   <div class="linha">
      <a class="item-linha" href="detalhesCategoria.php?id=<?= $linha['idCategoria']?>"><img src="images/<?= $linha['imagemCategoria'] ?>" class="img-linha"> </a>
      <a class="item-linha"><?= $linha['nomeCategoria'] ?></a>
-     <a class="item-linha" href="editar.php?id=<?= $linha['idCategoria']?>">Editar</a>
+     <a class="item-linha" href="editarCategoria.php?id=<?= $linha['idCategoria']?>">Editar</a>
      <a class="item-linha" href="deletar.php?id=<?= $linha['idCategoria']?>&modo=categorias">Deletar</a>
   </div>
    
 <?php endwhile ?> 
 
-<?php }else {
+<?php }else if($modo == 'imagens') { ?>
+
+  <h1>Inventário de imagens:</h1>
+
+<?php while ($linha = mysqli_fetch_assoc($resultado)): ?>  
+      
+  <div class="linha">
+     <a class="item-linha" href="detalhesCategoria.php?id=<?= $linha['idImagem']?>"><img src="images/<?= $linha['imagemCategoria'] ?>" class="img-linha"> </a>
+     <a class="item-linha" href="editar.php?id=<?= $linha['idImagem']?>">Editar</a>
+     <a class="item-linha" href="deletar.php?id=<?= $linha['idImagem']?>&modo=imagens">Deletar</a>
+  </div>
+   
+<?php endwhile ?> 
+
+
+<?php }else{
   echo "<h1>Nenhuma tabela de dados selecionada!</h1>";
   }?>
 
