@@ -21,7 +21,7 @@ Create table categorias(
 Create table imagens(
     idImagem integer not null auto_increment,
     idProduto integer,
-    arquivoImagem blob not null,
+    imagemSecundaria blob not null,
     CONSTRAINT fk_ImgsProd FOREIGN KEY (idProduto) REFERENCES produtos (idProduto),
     primary key(idImagem)
 

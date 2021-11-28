@@ -1,7 +1,7 @@
 <?php
 
-function adicionarImagem($conexao,$arquivoImagem){
-    $comando = "INSERT INTO imagens (arquivoImagem) values ('$arquivoImagem')";
+function adicionarImagem($conexao,$imagemSecundaria,$idProduto){
+    $comando = "INSERT INTO imagens (imagemSecundaria,idProduto) values ('$imagemSecundaria','$idProduto')";
 
     $resultado = mysqli_query($conexao,$comando);
     return $resultado;
@@ -13,8 +13,8 @@ function deletarImagem($conexao,$idImagem) {
     $resultado = mysqli_query($conexao,$comando);
     return $resultado;
 }
-function atualizarImagem($conexao,$idImagem,$arquivoImagem) {
-    $comando ="UPDATE imagens SET arquivoImagem = '$arquivoImagem' where idImagem = '$idImagem' " ;
+function atualizarImagem($conexao,$idImagem,$imagemSecundaria) {
+    $comando ="UPDATE imagens SET imagemSecundaria = 'imagemSecundaria' where idImagem = '$idImagem' " ;
  
     $resultado = mysqli_query($conexao,$comando);
     return $resultado;
@@ -29,6 +29,12 @@ function exibirImagem($conexao,$idImagem) {
 
     $comando = "SELECT * FROM imagens where idImagem = '$idImagem'";
 
+    $resultado = mysqli_query($conexao,$comando);
+    return $resultado;
+}
+function imagemSecundaria($conexao,$idProduto) {
+
+    $comando = "SELECT * FROM imagens where idProduto = '$idProduto'";
     $resultado = mysqli_query($conexao,$comando);
     return $resultado;
 }

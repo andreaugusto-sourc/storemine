@@ -7,6 +7,7 @@ $resultado = exibirCategorias($conexao);
 
 $resultado2 = exibirImagens($conexao);
 
+$resultado3 = exibirProdutos($conexao);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -79,13 +80,13 @@ $resultado2 = exibirImagens($conexao);
 
 <h2>Adicione imagens secundárias para os produtos</h2>
 
-<label for="arquivoImagem">Imagem secundária:</label>
-<input type="file" name="arquivoImagem" id="arquivoImagem">
+<label for="imagemSecundaria">Imagem secundária:</label>
+<input type="file" name="imagemSecundaria" id="imagemSecundaria">
 
-<label for="IdProduto">Imagem principal</label>
-<select>
-    <?php while($imagem = mysqli_fetch_assoc($resultado2)) {
-        echo "<option>" . $imagem['idImagem'] . "</option>";
+
+<select name="idProduto" id="idProduto">
+    <?php while($produto = mysqli_fetch_assoc($resultado3)) {
+        echo "<option>" . $produto['idProduto'] . " - " . $produto['nomeProduto'] . "</option>";
     } ?>
 </select>
 

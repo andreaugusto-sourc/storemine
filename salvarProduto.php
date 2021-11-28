@@ -14,7 +14,6 @@ $idCategoria = $_POST['idCategoria'];
 $replacement = "";
 $pattern = "/[A-Za-z\-]+/";
 $idCategoria = preg_replace($pattern,$replacement,$idCategoria);
-echo $idCategoria;
 
 if (isset($_FILES["imagemProduto"])) {
     $imagem = $_FILES["imagemProduto"];

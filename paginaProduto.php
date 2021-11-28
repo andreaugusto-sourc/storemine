@@ -6,15 +6,15 @@ require_once 'crud/CRUD.php';
 $conexao = conectar();
 $idProduto = $_GET['id'];
 
-
 $resultado = exibirProduto($conexao,$idProduto);
 $produto = mysqli_fetch_assoc($resultado);
 
 $idCategoria = $produto['idCategoria'];
-
 $resultado2 = exibirCategoria($conexao,$idCategoria);
 $categoria = mysqli_fetch_assoc($resultado2);
 
+$resultado3 = imagemSecundaria($conexao,$idProduto);
+$imagem = mysqli_fetch_assoc($resultado3);
 require_once 'tabelaParcelas.php';
 
 
@@ -42,7 +42,7 @@ require_once 'tabelaParcelas.php';
 
 <article>
     <img src="images/<?= $produto['imagemProduto']?>" class="imagens-secundarias">
-    <img src="images/<?= $produto['imagemProduto']?>" class="imagens-secundarias">
+    <img src="images/<?= $imagem['imagemSecundaria']?>" class="imagens-secundarias">
 </article>
 </div>
 

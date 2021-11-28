@@ -95,7 +95,7 @@ if (isset($_GET['modo'])) {
 <?php while ($linha = mysqli_fetch_assoc($resultado)): ?>  
       
   <div class="linha">
-     <a class="item-linha" href="detalhesCategoria.php?id=<?= $linha['idImagem']?>"><img src="images/<?= $linha['imagemCategoria'] ?>" class="img-linha"> </a>
+     <a class="item-linha" href="detalhesCategoria.php?id=<?= $linha['idImagem']?>"><img src="images/<?= $linha['imagemSecundaria'] ?>" class="img-linha"> </a>
      <a class="item-linha" href="editar.php?id=<?= $linha['idImagem']?>">Editar</a>
      <a class="item-linha" href="deletar.php?id=<?= $linha['idImagem']?>&modo=imagens">Deletar</a>
   </div>

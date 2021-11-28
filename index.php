@@ -10,6 +10,7 @@ $resultado = mysqli_query($conexao,$comando) or die("Busca deu errado!");
 
 ?>
 <head>
+    <link rel="icon" href="images/m.webp">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
