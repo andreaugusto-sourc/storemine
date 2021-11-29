@@ -26,7 +26,7 @@ if (isset($_FILES["novaImagem"])) {
     $novoCaminho = uniqid();
 
     $extensao = strtolower(pathinfo($imagemCaminho,PATHINFO_EXTENSION));
-    if ($extensao !=  "jpg" && $extensao != 'png' ) {
+    if ($extensao !=  "jpg" && $extensao != 'png' && $extensao != 'webp' ) {
         die("Tipo de arquivo inválido!");
     }
 
