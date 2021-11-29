@@ -16,7 +16,7 @@ function deletarCategoria($conexao,$idCategoria) {
     return $resultado;
 
 }
-function atualizarCategoria($conexao,$idCategoria,$novoNome,$novaDescri,$novaImagem) {
+function atualizarCategoria($conexao,$idCategoria,$novoNome,$novaImagem,$novaDescri) {
 
     $comando ="UPDATE categorias SET nomeCategoria = '$novoNome', descriCategoria = '$novaDescri', imagemCategoria = '$novaImagem' where idCategoria = '$idCategoria' " ;
  

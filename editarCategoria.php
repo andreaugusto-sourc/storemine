@@ -22,7 +22,7 @@ $categoria = mysqli_fetch_assoc($resultado);
 </head>
 <body>
 <?php include 'header_simples.php' ?>
-<form method="POST" action="atualizarCategoria.php">
+<form method="POST" action="atualizarCategoria.php" enctype="multipart/form-data">
 
 <h2>Edite a categoria</h2>
 

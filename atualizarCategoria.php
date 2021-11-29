@@ -7,6 +7,7 @@ require_once 'conexao.php';
 require_once 'crud/CRUD.php';
 
 $conexao = conectar();
+
 $idCategoria = $_POST['idCategoria'];
 
 $novoNome = $_POST['novoNome'];
@@ -29,7 +30,7 @@ if (isset($_FILES["novaImagem"])) {
     $novoCaminho = uniqid();
 
     $extensao = strtolower(pathinfo($imagemCaminho,PATHINFO_EXTENSION));
-    if ($extensao !=  "jpg" && $extensao != 'png' ) {
+    if ($extensao !=  "jpg" && $extensao != 'png' && $extensao != 'webp' ) {
         die("Tipo de arquivo inválido!");
     }
 
@@ -44,9 +45,8 @@ if (isset($_FILES["novaImagem"])) {
     }
     
 }
-$novaImagem = $novoCaminho . "." . $extensao ;
-
-$resultado = atualizarCategoria($conexao,$idCategoria,$novoNome, $novaImagem, $novaDescri);
+$novaImagem = $novoCaminho ."." . $extensao;
+$resultado = atualizarCategoria($conexao,$idCategoria,$novoNome,$novaImagem,$novaDescri);
 
 if($resultado) {
     echo "Categoria atualizada com sucesso

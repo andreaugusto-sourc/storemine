@@ -31,6 +31,7 @@ $produto = mysqli_fetch_assoc($resultado);
 
 <label for="novaDescri">Novo descrição do Produto:</label>
 <input type="text" value="<?= $produto['descriProduto'] ?>" name="novaDescri" id="novaDescri">
+
 <label for="novaCate">Nova Categoria</label>
 <select value="<?= $produto['idCategoria']?>" name="novaCate" id="novaCate">
         <?php while($categoria = mysqli_fetch_assoc($resultado2)) {

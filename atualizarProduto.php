@@ -5,7 +5,7 @@ if(isset($_SESSION['admin'])) {
 
 require_once 'conexao.php';
 require_once 'crud/CRUD.php';
-
+$conexao = conectar();
 $idProduto = $_POST['idProduto'];
 $novoNome = $_POST['novoNome'];
 $novoPreco = $_POST['novoPreco'];
@@ -43,12 +43,18 @@ if (isset($_FILES["novaImagem"])) {
 }
 $novaImagem = $novoCaminho . "." . $extensao ;
 $novaCate = $_POST['novaCate'];
+$replacement = "";
+$pattern = "/[A-Za-z\-]+/";
+$novaCate = preg_replace($pattern,$replacement,$novaCate);
 $novaDescri = $_POST['novaDescri'];
 $novoEstoque = $_POST['novoEstoque'];
 
-
-$conexao = conectar();
-
+echo "Nome - " . $novoNome;
+echo "NovoPreco - " . $novoPreco;
+echo "novaImagem - " . $novaImagem;
+echo "novaDescri - " . $novaDescri;
+echo "novoEstoque - " . $novoEstoque;
+echo "novaCate - " . $novaCate;
 $resultado = atualizarProduto($conexao,$idProduto,$novoNome, $novoPreco, $novaImagem, $novaDescri,$novoEstoque,$novaCate);
 
 if($resultado) {
