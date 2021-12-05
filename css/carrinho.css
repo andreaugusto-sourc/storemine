@@ -1,19 +1,106 @@
 @import 'base.css';
-section{
+#topo{
+    cursor: pointer;
+    padding: 2rem;
     display: flex;
+    justify-content:space-between;
+    align-items: center;
 }
-.item-carrinho{
+h2{
+    font-size: 3.5rem;
+}
+#comprarMais{
+    padding: 1rem;
+    text-align: center;
+    width: 220px;
+    font-size: 2rem;
+    color: whitesmoke;
+    border: solid black 0.2rem;
+    background-color: rgb(136, 201, 38);
+}
+/* ESTRUTURA */     
+main{
+    display: flex;
+    justify-content: space-between;
+}
+/* PARTE CARRINHO */
+#carrinho{
     display: flex;
     flex-direction: column;
+    
+}
+.item-carrinho{
+    border-top: 0.2rem solid black;
+    font-size: 1.5rem;
+    width: 680px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 .imagem-item{
-    width: 180px;
+    border: 2px solid black;
+    width: 120px;
+    object-fit: cover;
+    max-height: 120px;
 }
-.botoes{
+
+.item-carrinho a{
+    color: black;
+    font-size: 4rem;
+  
+    
+}
+article{
+    color: gray;
+    width: 620px;
     display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    
 }
-.botoes a{
+article a{
+    word-spacing: 2.2rem;
+}
+.espaco{
+    margin-left: 20rem;
+}
+/* PARTE RESUMO-PEDIDO*/
+#resumo-pedido{
+    font-size: 1.6rem;
+    padding: 1rem;
+    width: 380px;
+    border: 0.2rem black solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+h3{
+    font-size: 2.2rem;
+}
+.info-carrinho{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0; 
+    width: 100%;
+  
+}
+.info-carrinho p{
+    width: 100px;
+   
+}
+#barra{
+    border-bottom: 0.2rem black solid;
+}
+#continuarCompra{
+    text-align: center;
+    width: 60%;
+    cursor: pointer;
+    padding: 1.8rem;
     font-size: 2rem;
-    padding: 0.8rem 1.5rem;
-    border: solid black 0.1rem;
+    color: black;
+    border: solid black 0.2rem;
+    background-color: rgb(136, 201, 38);
+
 }
