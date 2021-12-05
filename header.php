@@ -13,7 +13,7 @@
  
      <img src="images/minecart.png" class="imagens-link"> <a class="link" href="carrinho.php">Carrinho</a>
 
-     <img src="images/uniao2.png" class="imagens-link">   <a class="link" href="">Cadastro ou Login</a>
+     <img src="images/uniao2.png" class="imagens-link">   <a class="link" href="cadastro_login.php">Cadastro ou Login</a>
 
 </header>
 

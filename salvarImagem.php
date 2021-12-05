@@ -1,8 +1,10 @@
 <?php
+session_start();
+
 require_once 'crud/CRUD.php';
 require_once 'conexao.php';
 $conexao = conectar();
-
+if(isset($_SESSION['admin'])) {
 if (isset($_FILES["imagemSecundaria"])) {
     $imagem = $_FILES["imagemSecundaria"];
 
@@ -53,5 +55,7 @@ if ($resultado) {
     <br> <a href='index.php'>Home</a> ou <a href='admin.php'>Admin</a>";
 }
 
-
+}else{
+    die("Tu não tem permissão admin, SUMA DAQUI OU FAÇA LOGIN! <a href='login.php'>Login</a>");
+}
 ?>
