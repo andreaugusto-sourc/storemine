@@ -1,3 +1,4 @@
+<div id="cabecalho">
 <header>
     
     <img src="images/creep.png" id="img-logo">
@@ -25,12 +26,18 @@
     <li class="item-cabecalho">Diversos</li>
 
 </ul>
+</div>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
 <style>
 /* CABECALHO */
+#cabecalho{
+    display:flex;
+    flex-direction:column;
+    background-color: var(--cor1);
+}
 header{
     padding: 1.5rem;
     display: flex;
@@ -77,6 +84,7 @@ ul{
     display: flex;
     justify-content: space-around;
     padding: 2rem;
+    
 }
 .item-cabecalho{
     font-family: 'Times New Roman', Times, serif;

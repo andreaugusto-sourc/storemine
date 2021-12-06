@@ -42,7 +42,10 @@ require_once 'tabelaParcelas.php';
 
 <article>
     <img src="images/<?= $produto['imagemProduto']?>" class="imagens-secundarias">
+  
     <img src="images/<?= $imagem['imagemSecundaria']?>" class="imagens-secundarias">
+
+    
 </article>
 </div>
 

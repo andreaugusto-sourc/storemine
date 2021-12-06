@@ -1,21 +1,21 @@
-Create table produtos(
-idProduto integer not null auto_increment,
-nomeProduto varchar(30) not null,
-descriProduto text not null,
-imagemProduto varchar(60) not null,
-precoProduto decimal(10,2) not null,
-estoqueProduto integer not null,
-idCategoria integer,
-CONSTRAINT fk_CateProd FOREIGN KEY (idCategoria) REFERENCES categorias (idCategoria),
-primary key(idProduto)
-
-);
 Create table categorias(
     idCategoria integer not null auto_increment,
     nomeCategoria varchar(40) not null,
     imagemCategoria blob not null,
     descriCategoria text null,
     primary key(idCategoria)
+
+);
+Create table produtos(
+   idProduto integer not null auto_increment,
+   nomeProduto varchar(30) not null,
+   descriProduto text not null,
+   imagemProduto varchar(60) not null,
+   precoProduto decimal(10,2) not null,
+   estoqueProduto integer not null,
+   idCategoria integer,
+   CONSTRAINT fk_CateProd FOREIGN KEY (idCategoria) REFERENCES categorias (idCategoria),
+   primary key(idProduto)
 
 );
 Create table imagens(
@@ -30,6 +30,9 @@ Create table imagens(
 Create table usuario(
     idUsuario intenger not null auto_increment,
     nomeUsuario varchar(16) not null,
+    nascUsuario  varchar(20) not null,
+    cpfUsuario intenger not null,
+    emailUsuario text not null,
     senhaUsuario varbinary(100) not null,
     primary key(idUsuario)
 

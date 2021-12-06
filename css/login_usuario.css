@@ -1,0 +1,87 @@
+@import 'base.css';
+
+section{
+    margin-top: 3.5rem;
+    background-image: url(https://img.elo7.com.br/product/original/11E912E/painel-minecraft-g-frete-gratis-banner-festa-infantil.jpg);
+    background-size: 100%;
+    padding: 5rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+.estrutura{
+    height: 550px;
+    background-color: var(--cor1);
+    border: solid 0.2rem gray;
+    padding: 0.8rem;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    font-size: 3rem;
+    background-color: rgb(136, 201, 38);
+}
+aside{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    height: 4vh;
+}
+#botao{
+    font-family: 'Russo One', sans-serif;
+    font-size: 2rem;
+    height: 8.5vh;
+    border: solid black 0.2rem;
+    cursor: pointer;
+    background-color: rgb(136, 201, 38);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+p{
+    text-decoration: underline;
+}
+.bloco{
+    display: flex;
+    flex-direction: column;
+}
+/* CADASTRO PARTE */
+.decoracao2-img{
+    width: 100px;
+    margin: 3rem;
+
+}
+/* LOGIN PARTE */
+.decoracao{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.decoracao-img{
+    border: black 0.4rem solid;
+    object-fit: contain;
+    width: 100px; 
+   
+}
+article{
+    font-size: 1.7rem;
+    padding: 1rem;
+    width: 200px;
+    text-align: start;
+}
+small{
+    margin-top: 0.5rem;
+    text-decoration: underline;
+    color: rgb(102, 209, 209);
+}
+.decoracao3-img{
+    margin: 2rem;
+    margin-left: 4.5rem;
+    margin-bottom: 4.5rem;
+    width: 100px;
+}

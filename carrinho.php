@@ -4,7 +4,8 @@ require_once 'conexao.php';
 require_once 'crud/CRUD.php';
 
 $conexao = conectar();
-$frete = 20;
+
+$frete = 0;
 $subtotal = 0;
 $total = 0;
 ?>
@@ -33,6 +34,7 @@ $total = 0;
      <?php if (isset($_SESSION['carrinho'])) { ?>
         <article> <a>Produtos</a> <a id="espaco">Nome Valor Quantidade Funções </a> </article>
          <?php foreach($_SESSION['carrinho'] as $chave => $valor ) { 
+             $frete = 20.00;
              $subtotal += $valor['quantidade'] * $valor['preco'];
              $total = $frete + $subtotal;?>
      
