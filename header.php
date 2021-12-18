@@ -1,4 +1,5 @@
-<div id="cabecalho">
+<section id="cabecalho">
+
 <header>
     
     <img src="images/creep.png" id="img-logo">
@@ -7,7 +8,7 @@
 
     <div id="barra-pesquisa">
 
-    <input type="text" id="input-pesquisa" placeholder="O que voce está procurando?">
+    <input type="search" id="input-pesquisa" placeholder="O que voce está procurando?">
     <button class="icon-pesquisa" type="submit"><ion-icon name="search-outline"></ion-icon></button>
 
     </div>
@@ -26,7 +27,11 @@
     <li class="item-cabecalho">Diversos</li>
 
 </ul>
-</div>
+
+</section>
+
+<div id="espaco"></div>
+
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
@@ -34,6 +39,8 @@
 <style>
 /* CABECALHO */
 #cabecalho{
+    margin:0;
+    padding:0;
     display:flex;
     flex-direction:column;
     background-color: var(--cor1);
@@ -47,6 +54,7 @@ header{
     
 }
 h1{
+    padding:0.5rem;
     color: var(--cor0);
     font-size: 3.5rem;
 }
@@ -54,17 +62,18 @@ span{
     color: var(--cor2);
 }
 #img-logo{
-    width:8%;
-    max-width: 120px;
+    width:10%;
+    max-width:140px;
 }
 #barra-pesquisa{
+    padding:0.5rem;
     display: flex;
     
 }
 #input-pesquisa{
     font-size: 1.5rem;
     width:22.75vw;
-    height:5rem;
+    height:5.5rem;
 }
 .icon-pesquisa{
     border: none;
@@ -72,13 +81,16 @@ span{
     color: white;
 }
 .imagens-link{
+    padding:0.5rem;
     width:5%;
+    
 }
 .link{
     color:black;
 }
 /* MENU */
 ul{
+    margin-bottom:4%;
     background-color: var(--cor0);
     list-style: none;
     display: flex;
@@ -93,4 +105,48 @@ ul{
 
 }
 
+@media(max-width:500px) {
+#cabecalho{
+    width: 100%;
+    background-color: var(--cor0);
+    position: fixed;
+
+}
+header{
+    background-color: var(--cor1);
+    width: 100%;
+}    
+h1{
+    margin: 0.5rem;
+    font-size: 3rem;
+}    
+#input-pesquisa{
+    width: 28%;
+    margin: 0;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 2.35vh;
+}
+.icon-pesquisa{
+    font-size:1.5rem;
+   
+}
+ul{
+    padding:1rem
+}
+.item-cabecalho{
+    font-size: 1.8rem;
+    
+}
+.imagens-link{
+    margin: 0.5rem;
+}
+#espaco{
+    margin-bottom: 8rem;
+    height: 25%;
+    background-size: 15%
+}
+
+
+}
 </style>

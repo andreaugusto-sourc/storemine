@@ -23,11 +23,23 @@ $resultado = mysqli_query($conexao,$comando) or die("Busca deu errado!");
 <section class="caixa-produtos">
 <?php while ($linha = mysqli_fetch_assoc($resultado)): ?>  
       
-       <div class="produto">
-        <a href="paginaProduto.php?id=<?= $linha['idProduto']?>"> <img src="images/<?= $linha["imagemProduto"] ?>" class="img-produto"> </a>
-        <a class ="titulo-produto" href="paginaProduto.php?id=<?= $linha['idProduto']?> "> <?= $linha['nomeProduto'] ?>  </a>
-        <a class ="preco-produto" href="paginaProduto.php?id=<?= $linha['idProduto']?> "> R$ <?= number_format($linha["precoProduto"], 2, ',', '.' ) ?> </a>
-       </div> 
+<div class="produto">
+
+<a class="href-produto" href="paginaProduto.php?id=<?= $linha['idProduto']?>"><img src="images/<?= $linha["imagemProduto"]  ?>" class="img-produto"></a>
+
+<div class="info-mobile">
+
+    <a class="href-produto" href="paginaProduto.php?id=<?= $linha['idProduto']?>">
+        <div class="titulo-produto"><?= $linha['nomeProduto'] ?></div>
+    </a>
+    <a class="href-produto" href="paginaProduto.php?id=<?= $linha['idProduto']?>">
+        <div class="preco-produto"> R$ <?= number_format($linha["precoProduto"], 2, ',', '.' ) ?> </div>
+    </a>
+
+</div>
+
+</div>
+    
 
 <?php endwhile ?> 
 </section>

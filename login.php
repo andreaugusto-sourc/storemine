@@ -20,6 +20,6 @@
 
     <input type="submit" value="Enviar" id="botao">
     </form>
-    
+    <?php include 'footer.php'; ?>
 </body>
 </html>

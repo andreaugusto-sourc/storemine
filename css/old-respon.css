@@ -62,7 +62,6 @@
         font-size: 1.8rem;
     }
     h1{
-        margin: 3;
         font-size: 3rem;
     }
     #caixa-barra{
@@ -134,9 +133,6 @@
         justify-content: center;
         width: 100%;
         margin:0;
-    }
-    .item-rodape{
-        font-size: 2.5rem;
     }
    
     

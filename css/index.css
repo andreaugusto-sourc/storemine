@@ -1,23 +1,26 @@
 
 @import 'base.css';
 /* ESTRUTURA PRODUTOS */
+.href-produto{
+    width: 100%;
+    
+}
 a{
     text-decoration: none;
 }
 .caixa-produtos{
-    min-height: 40%;
     display:flex;
     justify-content: space-around;
     flex-wrap: wrap;
     
 }
 .produto{
-    margin-top: 2%;
     border: double gray 0.5rem;
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 26vw;
+    
 }
 .titulo-produto{
     color: black;
@@ -34,7 +37,8 @@ a{
 }
 .img-produto{
     object-fit: cover;
-    width:  100%;
+    width:100%;
     height: 62.3vh;
+    
   
 }

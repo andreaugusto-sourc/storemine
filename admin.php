@@ -42,8 +42,9 @@ if (isset($_GET['modo'])) {
     <a class="item-aba" href="admin.php?modo=produtos">Todos produtos</a>
 
     <a href="cadastro.php?modo=categorias" class="item-aba">Nova Categoria</a>
-
-    <a class="item-aba" href="admin.php?modo=categorias">Todas as categorias</a>
+    
+    <div class="barra-preta"></div>
+        <a class="item-aba" href="admin.php?modo=categorias">Todas as categorias</a>
 
     <a href="cadastro.php?modo=imagens" class="item-aba">Nova imagem </a>
 

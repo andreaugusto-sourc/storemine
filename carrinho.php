@@ -24,14 +24,15 @@ $total = 0;
     <div class="container">
     <?php include 'header.php' ?>   
 
-     <div id="topo">
+    
+     <main id="caixa-carrinho">
+     <div id="carrinho">
+    
+     <?php if (isset($_SESSION['carrinho'])) { ?>
+        <div id="topo">
          <h2>Meu carrinho</h2>
          <a href="index.php" id="comprarMais">Adicionar mais produtos</a>
      </div>
-     <main>
-     <section id="carrinho">
-    
-     <?php if (isset($_SESSION['carrinho'])) { ?>
         <article> <a>Produtos</a> <a id="espaco">Nome Valor Quantidade Funções </a> </article>
          <?php foreach($_SESSION['carrinho'] as $chave => $valor ) { 
              $frete = 20.00;
@@ -56,7 +57,7 @@ $total = 0;
 
     
         
-     </section>
+     </div>
 
      <div id="resumo-pedido"> 
         <h3>Resumo do Pedido</h3>
@@ -65,6 +66,7 @@ $total = 0;
         <div class="info-carrinho"><p>Total:</p> <p>R$<?= number_format($total,2,',','.')  ?></p></div>
         <a href="finalizar.php" id="continuarCompra">Continuar sua compra</a>
     </div>
+
 </main>
     </div>
  

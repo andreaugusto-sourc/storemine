@@ -24,10 +24,12 @@ a{
     padding: 1rem 0;
     color: rgb(127, 195, 193);
 }
+
 #aba-img{
-    min-width: 180px;
-    width: 180px;
+    min-width: 80px;
+    width: 13.23vw;
 }
+
 /* DASHBOARD */
 #dashboard{
     width: 65%;
@@ -49,5 +51,5 @@ h1{
     margin: 0 2.3rem;
 }
 .img-linha{
-    width: 110px;
+    width: 8.08vw;
 }
