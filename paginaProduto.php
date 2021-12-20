@@ -75,7 +75,7 @@ require_once 'tabelaParcelas.php';
     <div id="estrutura">
         <h2>Calcule seu frete</h2>
         <label for="cep">Digite seu CEP:</label>
-        <input type="number" id="enter" name="cep-number">
+        <input type="number" id="enter" name="numero-cep">
 
     </div>
 
@@ -157,7 +157,7 @@ require_once 'tabelaParcelas.php';
 
     </div>
     
-
+<script src="js/frete.js"></script>
 <?php include 'footer.php'; ?>
     
 </body>

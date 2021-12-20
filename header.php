@@ -21,10 +21,10 @@
 
 <ul>
     
-    <li class="item-cabecalho">Roupas</li>
-    <li class="item-cabecalho">Pelúcias</li>
-    <li class="item-cabecalho">Acessórios</li>
-    <li class="item-cabecalho">Diversos</li>
+    <li class="item-ul">Roupas</li>
+    <li class="item-ul">Pelúcias</li>
+    <li class="item-ul">Acessórios</li>
+    <li class="item-ul">Diversos</li>
 
 </ul>
 
@@ -44,6 +44,7 @@
     display:flex;
     flex-direction:column;
     background-color: var(--cor1);
+    margin-bottom:4%;
 }
 header{
     padding: 1.5rem;
@@ -76,6 +77,7 @@ span{
     height:5.5rem;
 }
 .icon-pesquisa{
+    font-size:2rem;
     border: none;
     background-color: #222;
     color: white;
@@ -90,18 +92,21 @@ span{
 }
 /* MENU */
 ul{
-    margin-bottom:4%;
+    text-align:center;
+    font-size:2rem;
+    align-items: center;
     background-color: var(--cor0);
     list-style: none;
     display: flex;
     justify-content: space-around;
-    padding: 2rem;
+    padding: 2rem 3rem;
     
 }
-.item-cabecalho{
+.item-ul{
     font-family: 'Times New Roman', Times, serif;
     color: var(--cor1);
     font-size: 2.1rem;
+    
 
 }
 
@@ -132,19 +137,18 @@ h1{
    
 }
 ul{
-    padding:1rem
+    padding:0.5rem;
 }
-.item-cabecalho{
-    font-size: 1.8rem;
-    
+.item-ul{
+    padding:0;
+    font-size:2.5rem;
 }
+
 .imagens-link{
-    margin: 0.5rem;
+    margin: 0.3rem;
 }
 #espaco{
-    margin-bottom: 8rem;
-    height: 25%;
-    background-size: 15%
+    height: 20rem;
 }
 
 

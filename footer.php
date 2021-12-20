@@ -22,7 +22,7 @@ footer{
 .item-rodape{
     text-decoration: none;
     color: var(--cor4);
-    padding: 2rem 2.2rem 2rem 2.2rem;
+    padding: 2rem 4rem 2rem 4rem;
     font-size: 1.8rem;
     
 }

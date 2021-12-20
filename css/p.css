@@ -27,7 +27,7 @@ main{
 /* informacoes do produto */
 #info-produto{
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     display: flex;
     flex-direction: column;
     width: 35vw;
@@ -118,7 +118,7 @@ button a{
 }
 .selo{
     margin-top: 1.5rem;
-    font-size:1.6rem;
+    font-size:1.7rem;
 }
 .selo a{
     color: rgb(143, 209, 187);

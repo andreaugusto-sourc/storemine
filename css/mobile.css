@@ -1,6 +1,6 @@
-@media(max-width:1000px) {
+@media(max-width:900px) {
     html {
-        font-size: 45%;
+        font-size: 50%;
     }
     .preco-produto,.titulo-produto{
         max-height: 35px ;
@@ -10,13 +10,13 @@
 }
 
 
-@media(max-width:500px) {
+@media(max-width:600px) {
 
     html{
-        font-size: 34%;
+        font-size: 35%;
     }
     body{
-        height: 25vh;
+        
     }
     .container{
         max-width: none;
@@ -25,23 +25,24 @@
     /* pagina inicial */
     .caixa-produtos{
         flex-direction: column;
-        margin: auto;
+
        
     }
     .produto{
-        margin-top: 0.5rem;
-        margin-bottom: 1rem;
+        padding: 1rem 0rem;
+        margin: auto;
         border: none;
         border-bottom: gray 0.1px solid;
         flex-direction: row;
-        width: 100%;
+        width: 90%;
     
     }
     .info-mobile{
-        justify-content: center;
+        align-items: center;
+        justify-content: none;
         display: flex;
         flex-direction: column;
-        width: 65%;
+        width: 55%;
     }
     .img-produto{
         height: 160px;
