@@ -1,13 +1,5 @@
 
-@import 'base.css';
 /* ESTRUTURA PRODUTOS */
-.href-produto{
-    
-    
-}
-a{
-    text-decoration: none;
-}
 .caixa-produtos{
     display:flex;
     justify-content: space-around;
@@ -38,7 +30,6 @@ a{
 .img-produto{
     object-fit: cover;
     width:100%;
-    
-    
+    height: 62.3vh;
   
 }

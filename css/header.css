@@ -1,0 +1,180 @@
+@import 'base.css';
+
+header{
+    background-color:var(--cor1);
+    margin-bottom:5%;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    z-index:11;
+
+}
+header a{
+    display: block;
+    color:black;
+}
+.navbar{
+    padding: 1.5rem;
+    font-size:1.5rem;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+#logo{
+    min-width: 20px;
+    width:10%;
+  
+}
+#logo-texto{
+    font-size: 3.5rem;
+    color:var(--cor0);
+}
+span{    
+   color: var(--cor2);
+
+}
+#caixa-pesquisa{
+    display: flex;
+    padding:0.5rem
+}
+#input-pesquisa{
+    font-size:1.3rem;
+    width:21.75vw;
+    padding:1.5rem;
+
+}
+.icon-pesquisa{
+    border:none;
+    color:white;
+    background-color:black;
+    font-size:1.7rem;
+}
+.imagens-link{
+    display: block;
+    padding:0.5rem;
+    width:4vw;
+}
+/* HAMBURGUER */
+nav{
+    list-style: none;
+    display:flex;
+    align-items: center;
+}
+nav li{
+    align-items: center;
+    display: flex;
+
+}
+/* SEGUNDA PARTE */
+ul{
+    padding: 2rem 3rem;
+    font-size:1.8rem;
+    justify-content: space-around;
+    display:flex;
+    background-color:var(--cor0);
+    list-style:none;
+}
+.item-ul{
+    font-family: 'Times New Roman', Times, serif;
+    color:whitesmoke;
+
+}
+/* CABECALHO */
+
+@media (max-width:768px) {
+    html{
+        font-size:45%;
+    }
+    header{
+        margin-bottom: 1%;
+    }
+    nav{
+        display:none;
+    }
+    .one,.two,.three{
+        background-color: black;
+        height:5px;
+        width:100%;
+        margin: 6px auto;
+        transition-duration:0.3s ;
+    }
+    .menu-toggle{
+        width:35px;
+        height:30px;
+        
+    }
+
+    .menu-section.on{
+        position:absolute;
+        top:0;
+        left:0;
+        background-color: whitesmoke;
+        width:100vw;
+        z-index: 10;
+        text-align: center;
+    }
+    .menu-section.on nav{
+        display: block;
+      
+    }
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 60px;
+        top:20px;
+        
+    }
+    .menu-section.on .menu-toggle .one{
+        transform: rotate(45deg) translate(7px, 9px);
+    }
+    .menu-section.on .menu-toggle .two{
+        opacity: 0;
+    }
+    .menu-section.on .menu-toggle .three{
+        transform: rotate(-45deg) translate(7px, -9px);
+    }
+    nav{
+        border-bottom: 0.5rem solid black;
+        background-color:var(--cor1);
+        width: 100%
+    }
+    nav li{
+        padding: 0.5rem;
+        transition: 250ms linear 0s;
+        margin: auto;
+        width: 70%;
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
+    }
+    .imagens-link{
+        width: 15%;
+    }
+    li a{
+        text-align: center;
+        transition-duration:0.5s ;
+        font-size: 2.5rem;
+        width: 200px;
+    }
+
+}
+@media(max-width:550px) {
+    #logo-texto{
+        padding: 0;
+        font-size: 2.5rem;
+    }
+    #input-pesquisa{
+        padding: 0.9rem;
+        width: 24vw;
+        font-size: 1rem;
+    }
+    ul{
+        font-size: 1.6rem;
+    }
+    
+    
+
+
+
+
+
+}

@@ -116,11 +116,12 @@ button a{
 .botao:hover{
     text-decoration: underline;
 }
-.selo{
-    margin-top: 1.5rem;
+aside{
+    text-align: justify;
+    margin-top: 1rem;
     font-size:1.7rem;
 }
-.selo a{
+aside a{
     color: rgb(143, 209, 187);
 }
 

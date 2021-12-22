@@ -1,41 +1,21 @@
+<head>
+    <link rel="stylesheet" href="css/footer.css">
+</head>
 <footer>
-    
-    <a href="" class="item-rodape">Sobre</a>
+    <div id="caminhos-footer">
+    <a href="sobre.php" class="item-rodape">Sobre</a>
     <a href="" class="item-rodape">Contato</a>
     <a href="" class="item-rodape">Privacidade</a>
     <a href="admin.php" class="item-rodape">Administração</a>
+
+    </div>
+
+    <div id="redes-sociais">
+<a href="">Nosso instagram</a>
+<a href=""> <ion-icon class="redes-icons" name="logo-instagram"></ion-icon> </a>
+<a href="">Acesse o projeto</a>
+<a href=""> <ion-icon class="redes-icons" name="logo-github"></ion-icon> </a>
+</div>
  
 </footer>
 
-
-<style>
-    /* FOOTER */
-footer{
-    margin-top: 4%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: var(--cor3) 0.2rem solid;
-    width: 100%;
-}
-
-.item-rodape{
-    text-decoration: none;
-    color: var(--cor4);
-    padding: 2rem 4rem 2rem 4rem;
-    font-size: 1.8rem;
-    
-}
-@media(max-width:500px) {
-    footer{
-        width: 100%;
-        align-items: center;
-        height: 7vh;
-        justify-content: center;
-        margin:0;
-    }
-    .item-rodape{
-        font-size:2.2rem;
-    }
-}
-</style>

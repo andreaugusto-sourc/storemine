@@ -25,14 +25,14 @@ $resultado = mysqli_query($conexao,$comando) or die("Busca deu errado!");
       
 <div class="produto">
 
-<a class="href-produto" href="paginaProduto.php?id=<?= $linha['idProduto']?>"><img src="images/<?= $linha["imagemProduto"]  ?>" class="img-produto"></a>
+<a href="paginaProduto.php?id=<?= $linha['idProduto']?>"><img src="images/<?= $linha["imagemProduto"]  ?>" class="img-produto"></a>
 
 <div class="info-mobile">
 
-    <a class="href-produto" href="paginaProduto.php?id=<?= $linha['idProduto']?>">
+    <a href="paginaProduto.php?id=<?= $linha['idProduto']?>">
         <div class="titulo-produto"><?= $linha['nomeProduto'] ?></div>
     </a>
-    <a class="href-produto" href="paginaProduto.php?id=<?= $linha['idProduto']?>">
+    <a href="paginaProduto.php?id=<?= $linha['idProduto']?>">
         <div class="preco-produto"> R$ <?= number_format($linha["precoProduto"], 2, ',', '.' ) ?> </div>
     </a>
 
@@ -47,8 +47,6 @@ $resultado = mysqli_query($conexao,$comando) or die("Busca deu errado!");
 </div>
 <?php include 'footer.php' ?>
 
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 

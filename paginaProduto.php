@@ -52,12 +52,12 @@ require_once 'tabelaParcelas.php';
 
 <div id="info-produto">
 
-<article >
+
 
     <p><?= $produto['estoqueProduto']?> unidades vendidas</p>
     <div id="titulo"><?= $produto['nomeProduto'];?></div>
 
-</article>
+
 
 <div id="bloco-pagamento">
     
@@ -124,23 +124,23 @@ require_once 'tabelaParcelas.php';
 <button type="submit" class="botao" id="botao-carrinho"><a href="adicionarCarrinho.php?addCarrinho=<?= $idProduto ?>">Adicionar ao Carrinho</a></button>
 
 
-<article class="selo">
+<aside>
 
     <ion-icon name="bag-check"></ion-icon>
     <a>Compra garantida.</a> Produto não
     recebido = Reembolso na hora!
 
 
-</article>
+</aside>
 
-<article class="selo">
+<aside>
 
     <ion-icon name="return-down-back"></ion-icon>
     <a>Devolução grátis.</a> Você tem 7
     dias a partir da entrega.
-</article>
+</aside>
 
-<article class="selo">
+<aside>
 
     <ion-icon name="star"></ion-icon>
     <a>Avaliação Média dos usuários:</a>
@@ -151,7 +151,7 @@ require_once 'tabelaParcelas.php';
     <ion-icon name="star-half-sharp"></ion-icon>
 
 
-</article>
+</aside>
 
     </main>
 

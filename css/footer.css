@@ -1,0 +1,52 @@
+@import 'base.css';
+    /* FOOTER */
+    footer{
+        margin-top: 5%;
+        display: flex;
+        border-top: var(--cor3) 0.2rem solid;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+    
+    }
+    #redes-sociais{
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    
+    }
+    #redes-sociais a{
+        color: black;
+    }
+    .redes-icons{
+        padding: 2rem;
+        color: black;
+        font-size: 5rem;
+    }
+    #caminhos-footer{
+        flex-direction: column;
+        justify-content: flex-end;
+        display:flex;
+        align-items: center;
+        
+    }
+    
+    .item-rodape{
+        color: var(--cor4);
+        text-decoration: none;
+        padding: 2rem 4rem 2rem 4rem;
+        font-size: 1.8rem;
+        
+    }
+    @media(max-width:550px) {
+        footer{
+            border-top: var(--cor3) 0.5rem solid;
+        }
+        .item-rodape{
+            padding:2rem;
+            text-align:center;
+            width:100%;
+        }
+    }
