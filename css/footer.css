@@ -18,10 +18,11 @@
     
     }
     #redes-sociais a{
-        color: black;
+        color: var(--cor4);
+        margin-top: 1rem;
     }
     .redes-icons{
-        padding: 2rem;
+        padding: 1rem;
         color: black;
         font-size: 5rem;
     }

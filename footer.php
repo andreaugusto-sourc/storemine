@@ -11,10 +11,10 @@
     </div>
 
     <div id="redes-sociais">
-<a href="">Nosso instagram</a>
-<a href=""> <ion-icon class="redes-icons" name="logo-instagram"></ion-icon> </a>
-<a href="">Acesse o projeto</a>
-<a href=""> <ion-icon class="redes-icons" name="logo-github"></ion-icon> </a>
+<a href="">"Nosso" instagram:</a>
+<a href="https://www.instagram.com/andremartins1033/"> <ion-icon class="redes-icons" name="logo-instagram"></ion-icon> </a>
+<a href="">Acesse o projeto:</a>
+<a href="https://github.com/andreaugusto-sourc/storemine"> <ion-icon class="redes-icons" name="logo-github"></ion-icon> </a>
 </div>
  
 </footer>
