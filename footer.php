@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <footer>
     <div id="caminhos-footer">

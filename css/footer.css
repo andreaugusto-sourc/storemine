@@ -1,7 +1,9 @@
 @import 'base.css';
     /* FOOTER */
     footer{
-        margin-top: 5%;
+        padding: 0.5rem 0rem;
+        font-size: 1.8rem;
+        margin-top: 3%;
         display: flex;
         border-top: var(--cor3) 0.2rem solid;
         width: 100%;
@@ -18,8 +20,9 @@
     
     }
     #redes-sociais a{
-        color: var(--cor4);
+        color: black;
         margin-top: 1rem;
+        text-align: center;
     }
     .redes-icons{
         padding: 1rem;
@@ -33,16 +36,16 @@
         align-items: center;
         
     }
-    
     .item-rodape{
         color: var(--cor4);
         text-decoration: none;
         padding: 2rem 4rem 2rem 4rem;
-        font-size: 1.8rem;
         
     }
     @media(max-width:550px) {
+        /* FOOTER */
         footer{
+            width: 100%;
             border-top: var(--cor3) 0.5rem solid;
         }
         .item-rodape{

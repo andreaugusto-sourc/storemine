@@ -52,8 +52,6 @@ require_once 'tabelaParcelas.php';
 
 <div id="info-produto">
 
-
-
     <p><?= $produto['estoqueProduto']?> unidades vendidas</p>
     <div id="titulo"><?= $produto['nomeProduto'];?></div>
 
@@ -73,7 +71,7 @@ require_once 'tabelaParcelas.php';
 
 
     <div id="estrutura">
-        <h2>Calcule seu frete</h2>
+        <h3>Calcule seu frete</h3>
         <label for="cep">Digite seu CEP:</label>
         <input type="number" id="enter" name="numero-cep">
 

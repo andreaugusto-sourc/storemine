@@ -1,6 +1,7 @@
 
 main{
     display: flex;
+    justify-content: center;
  
 }
 #imagens-produto{
@@ -33,7 +34,6 @@ main{
     width: 35vw;
   
 }
-
 p{
     margin-top: 1rem;
     color: rgb(73, 73, 73);
@@ -60,7 +60,9 @@ p{
     color: black;
 
 }
+/* PARTE FRETE */
 #bloco-frete{
+    font-size: 1.6rem;
     margin-top: 1rem;
     display: flex;
     justify-content: space-evenly;
@@ -68,7 +70,6 @@ p{
 #enter{
     border: none;
     border: 0.1rem solid lightgray;
-    height: 2.5rem;
     width: 10vw;
     border-radius: 0.4rem;
 }
@@ -78,8 +79,7 @@ p{
     flex-direction: column;
 }
 #imagem-decorativa{
-    margin-top: 1rem;
-    width: 25%;
+    width: 40%;
 }
 /* INPUTS VARIAVEIS */
 select{
@@ -125,3 +125,6 @@ aside a{
     color: rgb(143, 209, 187);
 }
 
+@media (max-width:550px) {
+
+}
