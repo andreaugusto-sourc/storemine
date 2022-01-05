@@ -1,4 +1,4 @@
-<header>
+<section class="navbar2">
 
 <img src="images/creep.png" id="img-logo">
 
@@ -10,13 +10,13 @@
 
 <a href="" class="item-header"><ion-icon class="icon" name="shield-checkmark"></ion-icon>Segurança Garantida</a>
 
-</header>
+</section>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <style>
 
-header{
+.navbar2{
     padding: 1.5rem;
     display: flex;
     align-items: center;

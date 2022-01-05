@@ -1,8 +1,25 @@
+@media (max-width:1000px) {
+    html {
+        font-size: 50%;
+    }
+    .preco-produto,.titulo-produto{
+        max-height: 35px ;
+        min-height: 20px !important;
+    }
+
+}
+
+@media (max-width:900px) {
+    html {
+        font-size: 45%;
+    }
+    
+}
 
 @media (max-width:768px) {
     /*  GERAIS */
     html{
-        font-size: 55%;
+        font-size: 40%;
     }
     /* HEADER */
     header{
@@ -92,7 +109,7 @@
      }
 
 }
-@media(max-width:550px) {
+@media (max-width:550px) {
    /* GERAIS */
     html{
         font-size: 35%;
@@ -102,8 +119,15 @@
         width: 100%;
     }
     /* HEADER */
+    #logo-texto{
+        font-size: 2rem;
+    }
     ul{
         font-size: 1.4rem;
+    }
+    #input-pesquisa{
+        padding: 1rem;
+        font-size: 1rem;
     }
     /* INDEX */
     .caixa-produtos{
@@ -132,6 +156,7 @@
         width: 90%;
     }
     .titulo-produto{
+        font-size: 2.5rem;
         max-height: none;
         max-width: none;
     }
@@ -140,6 +165,7 @@
         min-height: 10px;
         margin-top: 2rem;
         width: 100%;
+        font-size: 4rem;
     }
 
 
@@ -176,8 +202,8 @@
      }
      /* PÁGINA CARRINHO */
 
-       /* FOOTER */
-       footer{
+    /* FOOTER */
+    footer{
         width: 100%;
         border-top: var(--cor3) 0.5rem solid;
     }
