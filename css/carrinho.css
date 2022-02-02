@@ -1,5 +1,6 @@
 
 #topo{
+    padding: 1rem;
     cursor: pointer;
     display: flex;
     justify-content:space-between;
@@ -9,9 +10,8 @@ h2{
     font-size: 3rem;
 }
 #comprarMais{
-    padding: 1rem;
+    padding: 0.8rem;
     text-align: center;
-    width: 220px;
     font-size: 2rem;
     color: whitesmoke;
     border: solid black 0.2rem;

@@ -198,6 +198,9 @@
         font-size: 4rem;
     }
      /* PÁGINA CARRINHO */
+     #comprarMais{
+         width: 36vw;
+     }
 
     /* FOOTER */
     footer{

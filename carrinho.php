@@ -4,7 +4,7 @@ require_once 'conexao.php';
 require_once 'crud/CRUD.php';
 
 $conexao = conectar();
-
+$_SESSION['carrinho-vazio'] = "Carrinho vazio...";
 $frete = 0;
 $subtotal = 0;
 $total = 0;
@@ -50,9 +50,10 @@ $total = 0;
               <a href="deletarCarrinho.php?deletarPROD=<?= $valor['id'] ?>"><ion-icon name="trash"></ion-icon></a>  
       
         </div>
-    <?php  }  }else{
-        echo "<h3>Carrinho ainda vazio...</h3>";
-    }
+    <?php  }  } if(isset($valor['nome']) == false) {
+    echo $_SESSION['carrinho-vazio'];
+
+}
 
     ?>
 
@@ -65,7 +66,7 @@ $total = 0;
         <div class="info-carrinho"><p>Subtotal:</p> <p>R$<?= number_format($subtotal,2,',','.') ?></p></div>
         <div class="info-carrinho" id="barra"><p>Frete:</p> <p>R$<?= number_format($frete,2,',','.')  ?></p></div>
         <div class="info-carrinho"><p>Total:</p> <p>R$<?= number_format($total,2,',','.')  ?></p></div>
-        <a href="finalizar.php" id="continuarCompra">Continuar sua compra</a>
+        <a href="finalizarPedido.php" id="continuarCompra">Continuar sua compra</a>
     </div>
 
 </main>

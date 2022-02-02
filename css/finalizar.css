@@ -1,0 +1,97 @@
+/* PARTE QUE INFORMA O CONTEUDO DO PEDIDO*/
+#pedido-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#pedido-info h1{
+    font-size: 3rem;
+}
+/* AVISO/DECORACAO */
+#aviso-pedido{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    
+}
+#aviso-pedido p{
+    padding: 0.5rem;
+    text-align: justify;
+    font-size: 1.4rem;
+    width: 18vw;
+}
+#aviso-pedido div{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    border: black 0.2rem solid;
+}
+#aviso-img{
+    width: 3.5vw;
+
+}
+.pedidos{
+    display: flex;
+    flex-direction: column;
+}
+.item-pedido{
+    padding: 1.5rem 0rem;
+    border-bottom: #444 0.2rem solid;
+    display: flex;
+    justify-content: space-between;
+}
+.item-pedido a{
+    font-size: 2rem;
+    color: #444;
+
+}
+/* PARTE QUE PEGA O ENDEREÇO DO USUÁRIO */
+#endereco-info{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+/* MAIS UM AVISO DECORATIVO */
+#endereco-info h3{
+    color: #777;
+}
+#aviso-endereco{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#avisoEndereco-img{
+    width: 9vw;
+
+}
+/* AGORA SIM O FORMULARIO */
+#endereco-info form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#endereco-info input{
+    font-family: 'Russo One', sans-serif;
+    border: none;
+    height: 4vh;
+    
+}
+#endereco-info select{
+    font-family: 'Russo One', sans-serif;
+    height: 4vh;
+    border: none;
+    margin-bottom: 1rem;
+}
+#endereco-info label{ 
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    
+}
+.input{
+    display: flex;
+    flex-direction: column;
+
+}
+
