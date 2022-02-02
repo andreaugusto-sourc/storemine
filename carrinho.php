@@ -24,16 +24,17 @@ $total = 0;
     <div class="container">
     <?php include 'header.php' ?>   
 
-    
+    <div id="topo">
+    <h2>Meu carrinho</h2>
+    <a href="index.php" id="comprarMais">Adicionar mais produtos</a>
+    </div>
+
      <main id="caixa-carrinho">
+
      <div id="carrinho">
-    
      <?php if (isset($_SESSION['carrinho'])) { ?>
-        <div id="topo">
-         <h2>Meu carrinho</h2>
-         <a href="index.php" id="comprarMais">Adicionar mais produtos</a>
-     </div>
-        <article> <a>Produtos</a> <a id="espaco">Nome Valor Quantidade Funções </a> </article>
+   
+        
          <?php foreach($_SESSION['carrinho'] as $chave => $valor ) { 
              $frete = 20.00;
              $subtotal += $valor['quantidade'] * $valor['preco'];
@@ -41,9 +42,9 @@ $total = 0;
      
           <div class="item-carrinho">
               <p><img src="images/<?= $valor['imagem'] ?> " class="imagem-item"></p>
-              <p><?= $valor['nome'] ?> </p>
+              <p id="nome-item"><?= $valor['nome'] ?> </p>
               <p>R$ <?= number_format($valor['quantidade'] * $valor['preco'],2,',','.') ?></p>
-              <p>Quantidade: <?= $valor['quantidade'] ?> </p>
+              <p> <?= $valor['quantidade'] ?> </p>
               <a href="adicionarCarrinho.php?adicionarUM=<?= $valor['id'] ?>">+</a>
               <a href="remover.php?removerUM=<?= $valor['id'] ?>">-</a>
               <a href="deletarCarrinho.php?deletarPROD=<?= $valor['id'] ?>"><ion-icon name="trash"></ion-icon></a>  

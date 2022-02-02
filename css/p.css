@@ -71,6 +71,7 @@ p{
     border: none;
     border: 0.1rem solid lightgray;
     width: 10vw;
+    min-height: 2vh;
     border-radius: 0.4rem;
 }
 #estrutura{
@@ -123,8 +124,4 @@ aside{
 }
 aside a{
     color: rgb(143, 209, 187);
-}
-
-@media (max-width:550px) {
-
 }

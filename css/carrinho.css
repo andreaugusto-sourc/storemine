@@ -1,13 +1,12 @@
-@import 'base.css';
+
 #topo{
     cursor: pointer;
-    padding: 2rem;
     display: flex;
     justify-content:space-between;
     align-items: center;
 }
 h2{
-    font-size: 4rem;
+    font-size: 3rem;
 }
 #comprarMais{
     padding: 1rem;
@@ -32,7 +31,6 @@ h2{
 .item-carrinho{
     border-top: 0.2rem solid black;
     font-size: 1.5rem;
-    width:  50vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,33 +41,30 @@ h2{
     width: 8.82vw;
     object-fit: cover;
     max-height: 120px;
+    margin: 1rem 0rem;
 }
 
 .item-carrinho a{
     color: black;
     font-size: 4rem;
+    margin: 0rem 0.5rem;
+    
+}
+.item-carrinho p{
+    margin: 0rem 2rem;
   
     
 }
-article{
-    color: gray;
-    width: 45.5vw;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.8rem;
-    
-}
-article a{
-    word-spacing: 2.2rem;
-}
-.espaco{
-    margin-left: 20rem;
+#nome-item{
+    text-align: center;
+    width:80px;
 }
 /* PARTE RESUMO-PEDIDO*/
 #resumo-pedido{
+    margin-top: 2%;
     font-size: 1.6rem;
     padding: 1rem;
-    width: 27.94vw;
+    width: 23.94vw;
     border: 0.2rem black solid;
     display: flex;
     flex-direction: column;
