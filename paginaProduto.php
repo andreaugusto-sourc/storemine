@@ -19,21 +19,13 @@ require_once 'tabelaParcelas.php';
 
 
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <link rel="icon" href="images/m.webp">
-    <link rel="stylesheet" href="css/main.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?=  $produto['nomeProduto'] ?></title>
+<head> 
+    <link rel="stylesheet" href="css/paginaProduto.css">
 </head>
+<?php include 'header.php' ?>   
 
-<body>
 <div class="container">
-<?php include 'header.php' ?>    
-
+    
 <main id="produto-caixa">
 
 <div id="imagens-produto">
@@ -155,7 +147,6 @@ require_once 'tabelaParcelas.php';
 
     </div>
     
-<script src="js/frete.js"></script>
 <?php include 'footer.php'; ?>
     
 </body>

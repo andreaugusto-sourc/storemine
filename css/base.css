@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');   
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
-html{
-    font-size:62.5%;
+html {
+    font-size: 62.5%;
 }
-:root{
+
+:root {
     --cor0: rgb(136, 201, 38);
     --cor1: whitesmoke;
     --cor2: rgb(172, 89, 30);
     --cor3: rgb(46, 45, 45);
     --cor4: rgb(37, 218, 218);
 }
-body{
+
+body {
     font-size: 1.5rem;
     box-sizing: border-box;
     font-family: 'Russo One', sans-serif;
@@ -19,14 +21,14 @@ body{
     padding: 0;
     background-color: var(--cor1);
 }
-.container{
+
+.container {
     width: 90%;
     max-width: 1024px;
     margin: auto;
 }
-a{
+
+a {
     text-decoration: none;
 }
-
-
 

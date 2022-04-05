@@ -1,14 +1,12 @@
 @import 'base.css';
 
 section{
-    margin-top: 3.5rem;
-    padding: 5rem;
     align-items: center;
     display: flex;
     justify-content: space-around;
 }
 .estrutura{
-    height: 550px;
+    height:  83.7vh;
     background-color: var(--cor1);
     border: solid 0.2rem gray;
     padding: 0.8rem;
@@ -38,19 +36,16 @@ form{
     border: solid black 0.2rem;
     cursor: pointer;
     background-color: rgb(136, 201, 38);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin:2rem;
 }
-p{
-    text-decoration: underline;
-}
+
 .bloco{
     display: flex;
     flex-direction: column;
 }
 /* CADASTRO PARTE */
 .decoracao2-img{
-    width: 100px;
+    width: 7.3vw;
     margin: 3rem;
 
 }
@@ -63,13 +58,13 @@ p{
 .decoracao-img{
     border: black 0.4rem solid;
     object-fit: contain;
-    width: 100px; 
+    width: 7.3vw; 
    
 }
 article{
     font-size: 1.7rem;
     padding: 1rem;
-    width: 200px;
+    width: 14.6vw;
     text-align: start;
 }
 small{
@@ -78,8 +73,6 @@ small{
     color: rgb(102, 209, 209);
 }
 .decoracao3-img{
-    margin: 2rem;
-    margin-left: 4.5rem;
-    margin-bottom: 4.5rem;
-    width: 100px;
+    margin: 2rem 4.5rem;
+    width: 7.3vw;
 }

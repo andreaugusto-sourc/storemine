@@ -10,15 +10,15 @@ form{
    
 }
 label{
-    font-size:20px;
+    font-size:1rem;
 }
 input{
-    width: 350px;
-    height: 30px;
+    width: 25vw;
+    height: 5.9vh;
 }
 #botao{
     font-size: 1.5em;
-    margin-top: 25px;
-    width: 310px;
-    height: 45px;
+    margin-top: 2.5rem;
+    width: 22.8vw;
+    height: 6.84vh;
 }

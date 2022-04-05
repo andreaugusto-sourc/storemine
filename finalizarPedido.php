@@ -17,10 +17,9 @@ $_SESSION['carrinho-vazio'] = "Carrinho vazio..."
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finalizar pedido</title>
 </head>
-<body>
-<div class="container">
-<?php include 'header.php' ?>
 
+<?php include 'header.php' ?>
+<div class="container">
 <main class="caixa">
 
 <div class="pedido-info"> 

@@ -1,50 +1,57 @@
-
-main{
+main {
     display: flex;
     justify-content: center;
- 
+
 }
-#imagens-produto{
+
+#imagens-produto {
     width: 45vw;
     background-color: none;
 
 }
-#imagem-principal{
+
+#imagem-principal {
     object-fit: cover;
     border-bottom: 0.1rem solid black;
     width: 100%;
     height: 82.1vh;
 }
-#imagens-produto article{
+
+#imagens-produto article {
     display: flex;
     width: 11.5vw;
 }
-.imagens-secundarias{
+
+.imagens-secundarias {
     object-fit: cover;
     margin: 0.5rem;
     width: 100%;
     height: 19.7vh;
 }
+
 /* informacoes do produto */
-#info-produto{
+#info-produto {
     padding: 1rem;
     font-size: 1.6rem;
     display: flex;
     flex-direction: column;
     width: 35vw;
-  
+
 }
-p{
+
+p {
     margin-top: 1rem;
     color: rgb(73, 73, 73);
     font-size: 2rem;
 
 }
-#titulo{
+
+#titulo {
     font-size: 2.5rem;
 
 }
-#bloco-pagamento{
+
+#bloco-pagamento {
     color: white;
     background-color: var(--cor0);
     margin-top: 1.5rem;
@@ -52,76 +59,90 @@ p{
     flex-direction: column;
 
 }
-#preco{
+
+#preco {
     font-size: 4rem;
 
 }
-#formas-href{
+
+#formas-href {
     color: black;
 
 }
+
 /* PARTE FRETE */
-#bloco-frete{
+#bloco-frete {
     font-size: 1.6rem;
     margin-top: 1rem;
     display: flex;
     justify-content: space-evenly;
 }
-#enter{
+
+#enter {
     border: none;
     border: 0.1rem solid lightgray;
     width: 10vw;
     min-height: 2vh;
     border-radius: 0.4rem;
 }
-#estrutura{
+
+#estrutura {
     justify-content: space-evenly;
     display: flex;
     flex-direction: column;
 }
-#imagem-decorativa{
+
+#imagem-decorativa {
     width: 40%;
 }
+
 /* INPUTS VARIAVEIS */
-select{
+select {
     border: none;
     margin-top: 2rem;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
+
 /* BOTOES DE ACAO */
-#botao-compra{
+#botao-compra {
     margin-top: 2rem;
     padding: 1.6rem;
     background-color: var(--cor0);
     font-size: 1.9rem;
 
 }
-#botao-carrinho{
+
+#botao-carrinho {
     padding: 1.5rem;
     background-color: rgb(185, 185, 185);
     font-size: 1.8rem;
     margin-bottom: 1rem;
 
 }
-.botao{
+
+.botao {
     text-align: center;
     border: none;
     cursor: pointer;
     font-family: 'Russo One', sans-serif;
 
 }
-button a{
-    color:black;
+
+button a {
+    color: black;
 }
-.botao:hover{
+
+.botao:hover {
     text-decoration: underline;
 }
-aside{
+
+aside {
     text-align: justify;
     margin-top: 1rem;
-    font-size:1.7rem;
+    font-size: 1.7rem;
 }
-aside a{
+
+aside a {
     color: rgb(143, 209, 187);
 }

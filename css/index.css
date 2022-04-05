@@ -1,38 +1,185 @@
+header {
+    background-color: var(--cor1);
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 11;
+
+}
+
+header a {
+    display: block;
+    color: black;
+}
+
+.navbar {
+    padding-top: 1.3rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#logo {
+    padding: 0.5rem;
+    width: 10%;
+
+}
+
+#logo-texto {
+    padding: 0.5rem;
+    font-size: 2.5rem;
+    color: var(--cor0);
+}
+
+span {
+    color: var(--cor2);
+
+}
+
+#caixa-pesquisa {
+    display: flex;
+    padding: 0.5rem
+}
+
+#input-pesquisa {
+    font-size: 1.3rem;
+    width: 21vw;
+    padding: 1.5rem;
+
+}
+
+.icon-pesquisa {
+    border: none;
+    color: white;
+    background-color: black;
+    font-size: 1.7rem;
+}
+
+.imagens-link {
+    display: block;
+    width: 4vw;
+    padding: 0.5rem;
+}
+
+/* HAMBURGUER */
+nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    padding: 0.5rem;
+    align-items: center;
+    display: flex;
+
+}
+
+/* SEGUNDA PARTE */
+ul {
+    padding: 2rem 3rem;
+    font-size: 1.8rem;
+    justify-content: space-around;
+    display: flex;
+    background-color: var(--cor0);
+    list-style: none;
+}
+
+.item-ul {
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+
+}
 
 /* ESTRUTURA PRODUTOS */
-.caixa-produtos{
-    display:flex;
+.caixa-produtos {
+    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
+
 }
-.produto{
+
+.produto {
     border: double gray 0.5rem;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 22vw;
     margin: 2rem 0rem;
-    
+
 }
-.titulo-produto{
+
+.titulo-produto {
     height: 5rem;
     color: black;
     font-size: 2.5rem;
     margin: 1.2rem 0rem 1.2rem 0rem;
     text-decoration: underline;
 }
-.preco-produto{
+
+.preco-produto {
     color: var(--cor1);
     font-size: 2.5rem;
     min-height: 40px;
     background-color: var(--cor0);
 
 }
-.img-produto{
+
+.img-produto {
     object-fit: cover;
-    max-width:100%;
+    max-width: 100%;
     height: 58vh;
- 
-  
+
+
+}
+
+/* FOOTER */
+footer {
+    padding: 0.5rem 0rem;
+    font-size: 1.8rem;
+    margin-top: 2%;
+    display: flex;
+    border-top: var(--cor3) 0.2rem solid;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+#redes-sociais {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+#redes-sociais a {
+    color: black;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.redes-icons {
+    padding: 1rem;
+    color: black;
+    font-size: 5rem;
+}
+
+#caminhos-footer {
+    flex-direction: column;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+
+}
+
+.item-rodape {
+    color: var(--cor4);
+    text-decoration: none;
+    padding: 2rem 4rem 2rem 4rem;
+
 }

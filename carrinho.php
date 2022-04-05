@@ -9,21 +9,9 @@ $frete = 0;
 $subtotal = 0;
 $total = 0;
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <link rel="icon" href="images/m.webp">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Carrinho</title>
-</head>
-<body>
-    <div class="container">
+    
     <?php include 'header.php' ?>   
-
+    <div class="container">
     <aside id="topo">
     <h2>Meu carrinho</h2>
     <a href="index.php" id="comprarMais">Adicionar mais produtos</a>
