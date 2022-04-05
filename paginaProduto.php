@@ -34,7 +34,7 @@ require_once 'tabelaParcelas.php';
 <div class="container">
 <?php include 'header.php' ?>    
 
-<main>
+<main id="produto-caixa">
 
 <div id="imagens-produto">
 

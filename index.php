@@ -13,7 +13,6 @@ $resultado = mysqli_query($conexao,$comando) or die("Busca deu errado!");
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="icon" href="images/m.webp">
     <link rel="stylesheet" href="css/main.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -24,10 +24,10 @@ $total = 0;
     <div class="container">
     <?php include 'header.php' ?>   
 
-    <div id="topo">
+    <aside id="topo">
     <h2>Meu carrinho</h2>
     <a href="index.php" id="comprarMais">Adicionar mais produtos</a>
-    </div>
+    </aside>
 
      <main id="caixa-carrinho">
 
@@ -36,7 +36,7 @@ $total = 0;
    
         
          <?php foreach($_SESSION['carrinho'] as $chave => $valor ) { 
-             $frete = 20.00;
+             $frete = 12.00;
              $subtotal += $valor['quantidade'] * $valor['preco'];
              $total = $frete + $subtotal;?>
      
@@ -64,7 +64,7 @@ $total = 0;
      <div id="resumo-pedido"> 
         <h3>Resumo do Pedido</h3>
         <div class="info-carrinho"><p>Subtotal:</p> <p>R$<?= number_format($subtotal,2,',','.') ?></p></div>
-        <div class="info-carrinho" id="barra"><p>Frete:</p> <p>R$<?= number_format($frete,2,',','.')  ?></p></div>
+        <div class="info-carrinho" id="barra"><p>Frete(Fixo):</p> <p>R$<?= number_format($frete,2,',','.')  ?></p></div>
         <div class="info-carrinho"><p>Total:</p> <p>R$<?= number_format($total,2,',','.')  ?></p></div>
         <a href="finalizarPedido.php" id="continuarCompra">Continuar sua compra</a>
     </div>

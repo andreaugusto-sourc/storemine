@@ -1,4 +1,5 @@
 <head>
+    <link rel="icon" href="images/icon.webp">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -6,9 +7,9 @@
 
 <div class="navbar">
     
-    <img src="images/creep.png" id="logo">
+    <img src="images/logo.png" id="logo">
 
-    <a href="index.php"><div id="logo-texto"><span>Store</span>Mine</div></a>
+    <a href="index.php"><div translate="no" id="logo-texto"><span>Store</span>Mine</div></a>
 
     <div id="caixa-pesquisa">
 
@@ -27,9 +28,9 @@
     <nav>
          
     
-     <li> <img src="images/minecart.png" class="imagens-link"> <a href="carrinho.php">Carrinho</a></li>
+     <li> <img src="images/carrinho.png" class="imagens-link"> <a href="carrinho.php">Carrinho</a></li>
 
-     <li><img src="images/uniao2.png" class="imagens-link">   <a href="cadastro_login.php">Cadastro ou Login</a></li>
+     <li><img src="images/cadastro.png" class="imagens-link">   <a href="cadastro_login.php">Cadastro ou Login</a></li>
 
      </nav>
    
@@ -49,11 +50,3 @@
     </ul>
 
 </header>
-
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-<script src="js/menu.js"></script>
-<style>
-
-</style>

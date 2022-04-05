@@ -2,8 +2,6 @@
 
 section{
     margin-top: 3.5rem;
-    background-image: url(https://img.elo7.com.br/product/original/11E912E/painel-minecraft-g-frete-gratis-banner-festa-infantil.jpg);
-    background-size: 100%;
     padding: 5rem;
     align-items: center;
     display: flex;
@@ -30,7 +28,7 @@ form{
     display: flex;
     flex-direction: column;
 }
-input{
+.estrutura form input{
     height: 4vh;
 }
 #botao{

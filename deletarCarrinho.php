@@ -6,6 +6,7 @@ if(isset($_GET['deletarPROD'])) {
     echo "Produto deletado";
     unset($_SESSION['carrinho'][$idProd]);
     sort($_SESSION['carrinho']);
+    header("Location: http://localhost/storemine/carrinho.php");
 }
 
 ?>

@@ -4,6 +4,7 @@ session_start();
 require_once 'conexao.php';
 require_once 'crud/crud.php';
 
+$_SESSION['carrinho-vazio'] = "Carrinho vazio..."
 ?>
 
 <!DOCTYPE html>
@@ -20,11 +21,11 @@ require_once 'crud/crud.php';
 <div class="container">
 <?php include 'header.php' ?>
 
-<section>
+<main class="caixa">
 
-<div id="pedido-info"> 
+<div class="pedido-info"> 
 
-<div id="aviso-pedido">
+<aside id="aviso-pedido">
     <h1>Meu pedido</h1>
     <div>
     <img src="images/herobrine.png" id="aviso-img">
@@ -32,27 +33,34 @@ require_once 'crud/crud.php';
 Preste atenção nas informações abaixo, e informe corretamente seu endereço para evitar possíveis incômodos.</p>
 </div>
 
-</div>
+</aside>
 
 <?php  
     if(isset($_SESSION['carrinho'])) {
 
    foreach($_SESSION['carrinho'] as $chave => $valor ) { 
+       $subtotal =  $valor['quantidade'] * $valor['preco'];
+       $frete = 12.00;
+       $total = $subtotal + $frete ;
+       
 ?>
 <div class="pedidos">
-    <div class="item-pedido"><a>-<?= $valor['nome']?></a>  <a>R$ <?= number_format($valor['preco'] * $valor['quantidade'],2,',','.')?></a>  </div>
+    <div class="item-pedido"><a>-<?= $valor['nome']?></a>  <a>x<?=$valor['quantidade'] ?></a>  <a>R$ <?= number_format($valor['preco'] * $valor['quantidade'],2,',','.')?></a>  </div>
 </div>
 
 
 <?php } }  if(isset($valor['nome']) == false) {
     echo $_SESSION['carrinho-vazio'];
+    $subtotal = 0;
+    $frete = 0;
+    $total = 0;
 
 }
 ?>
 
 <div id="endereco-info">
 
-<div id="aviso-endereco">
+<aside id="aviso-endereco">
 
 <div>   
 <h1>Endereço de envio</h1>
@@ -60,26 +68,21 @@ Preste atenção nas informações abaixo, e informe corretamente seu endereço 
 </div>
 <img src="images/ghastgamer.png" id="avisoEndereco-img">
 
+</aside>
+
+<form method="POST" action="salvarEndereco.php">
+
+<div>
+<input id="cepEndereco" placeholder="CEP "name="cepEndereco" type="number">
+<input id="bairroEndereco" placeholder="Bairro" class="input-longo" name="bairroEndereco" type="text">
 </div>
 
-<form method="" action="">
+<div>
+<input id="ruaEndereco" placeholder="Rua" class="input-longo" name="ruaEndereco" type="text">
+<input id="numeroEndereco" placeholder="Número" name="numeroEndereco" type="number">
+</div>
 
-<label for="cepEndereco">CEP:</label>
-<input id="cepEndereco" name="cepEndereco" type="number">
-
-<label for="bairroEndereco">Bairro:</label>
-<input id="bairroEndereco" name="bairroEndereco" type="text">
-
-<label for="ruaEndereco">Rua:</label>
-<input id="ruaEndereco" name="ruaEndereco" type="text">
-
-<label for="numeroEndereco">Número:</label>
-<input id="numeroEndereco" name="numeroEndereco" type="number">
-
-<select name="cidadeEndereco" id="cidadeEndereco">
-<option>Itapetininga</option>
-<option>Não entrega em outros lugares!</option>
-</select>
+<input type="text" placeholder="Complemento" name="complementoEndereco" id="complementoEndereco">
 
 
 </form>
@@ -93,16 +96,15 @@ Preste atenção nas informações abaixo, e informe corretamente seu endereço 
 
 
 
-<div id="blocos"> 
-  
-    
-</div>
 
 
-</section>
 
+
+
+</main>
 
 </div>
+
 <?php include 'footer.php' ?>
     
 </body>
